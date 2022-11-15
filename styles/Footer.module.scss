@@ -1,15 +1,15 @@
 #footer {
-  @apply text-center flex flex-col items-center px-10 xl:px-[5%];
+  @apply flex flex-col items-center px-10 text-center xl:px-[5%];
   .upper {
-    @apply flex flex-col items-center py-12 gap-4 border-b border-black border-solid border-opacity-10 lg:flex-row w-full
+    @apply flex w-full flex-col items-center gap-4 border-b border-solid border-black border-opacity-10 py-12 lg:flex-row
     lg:justify-between;
     .logo-container {
       @apply flex flex-col items-center lg:items-start;
       img {
-        @apply w-[110px] h-[30px] mb-4;
+        @apply mb-4 h-[30px] w-[110px];
       }
       p {
-        @apply opacity-60 leading-7;
+        @apply leading-7 opacity-60;
       }
     }
     .nav {
@@ -20,12 +20,12 @@
     }
   }
   .lower {
-    @apply flex flex-col items-center py-12 gap-4 lg:flex-row w-full lg:justify-between;
+    @apply flex w-full flex-col items-center gap-4 py-12 lg:flex-row lg:justify-between;
     .empty {
-      @apply hidden lg:flex w-[8.5rem];
+      @apply hidden w-[8.5rem] lg:flex;
     }
     p {
-      font-family: 'Eudoxus Sans';
+      font-family: "Eudoxus Sans";
       color: rgb(0 0 0 / 0.6);
       @apply text-lg;
       span {
