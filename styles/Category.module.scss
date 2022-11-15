@@ -1,0 +1,20 @@
+.category {
+  @apply flex h-48 w-40 flex-col items-center gap-[50px] rounded-[30px] bg-gradient-to-t to-transparent md:h-52 md:w-44;
+  &.breakfast,
+  &.lunch,
+  &.chocolate {
+    @apply from-[#7082461a];
+  }
+  &.vegan {
+    @apply from-[#6cc63f1a];
+  }
+  &.meat {
+    @apply from-[#cc261b1a];
+  }
+  &.dessert {
+    @apply from-[#f09e001a];
+  }
+  p {
+    @apply font-semibold leading-[1.22em] tracking-[-0.02em] lg:text-lg;
+  }
+}
