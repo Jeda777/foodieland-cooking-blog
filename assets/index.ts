@@ -7,22 +7,24 @@ import cauliflowerWalnutVegetarianTacoMeat from './Cauliflower Walnut Vegetarian
 import chickenMeatballsWithCreamCheese from './Chicken Meatballs with Cream Cheese-min.png'
 import chickenRamenSoupWithMushroom from './Chicken Ramen Soup with Mushroom -min.png'
 import chocolate from './chocolate-min.png'
+import close from './close.svg'
 import dessert from './dessert-min.png'
 import everyoneCanBeAChefInTheirOwnKitchen from './everyone-can-be-a-chef-in-their-own-kitchen-min.png'
 import facebook from './facebook.svg'
-import firecrackerVeganLettuceWrapsSpicy from './Firecracker Vegan Lettuce Wraps - Spicy! -min.png'
+import firecrackerVeganLettuceWrapsSpicy from './Firecracker Vegan Lettuce Wraps Spicy -min.png'
 import forkKnife from './ForkKnife.svg'
 import freshAndHealthyMixedMayonnaiseSalad from './Fresh and Healthy Mixed Mayonnaise Salad-min.png'
 import freshLimeRoastedSalmonWithGingerSauce from './Fresh Lime Roasted Salmon with Ginger Sauce-min.png'
 import fruityPancakeWithOrangeBlueberry from './Fruity Pancake with Orange & Blueberry-min.png'
 import handpickedRecipes from './handpicked-recipes-min.png'
 import healthyJapaneseFriedRiceWithAsparagus from './Healthy Japanese Fried Rice with Asparagus-min.png'
-import hearth from './Hearth.svg'
+import heart from './Heart.svg'
 import heroPerson from './hero-person-min.png'
 import instagram from './instagram.svg'
 import logo from './logo.svg'
 import lunch from './lunch-min.png'
 import meat from './meat-min.png'
+import menu from './menu.svg'
 import mixedTropicalFruitSaladWithSuperfoodBoosts from './Mixed Tropical Fruit Salad with Superfood Boosts-min.png'
 import paper from './paper.png'
 import play from './PlayCircle.svg'
@@ -50,6 +52,7 @@ export {
   chickenMeatballsWithCreamCheese,
   chickenRamenSoupWithMushroom,
   chocolate,
+  close,
   dessert,
   everyoneCanBeAChefInTheirOwnKitchen,
   facebook,
@@ -60,12 +63,13 @@ export {
   fruityPancakeWithOrangeBlueberry,
   handpickedRecipes,
   healthyJapaneseFriedRiceWithAsparagus,
-  hearth,
+  heart,
   heroPerson,
   instagram,
   logo,
   lunch,
   meat,
+  menu,
   mixedTropicalFruitSaladWithSuperfoodBoosts,
   paper,
   play,

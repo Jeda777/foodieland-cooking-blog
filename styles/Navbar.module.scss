@@ -1,0 +1,30 @@
+#navbar {
+  @apply flex relative px-8 py-4 justify-between border-b border-black border-solid border-opacity-10 font-medium items-center
+  tracking-[-0.02em] lg:py-6 lg:px-12 xl:py-10 xl:px-20;
+  button {
+    @apply h-8 w-8 lg:hidden;
+    img {
+      @apply h-full w-full;
+    }
+  }
+  .mobile-nav {
+    @apply absolute bg-brightBlue w-[90%] left-[5%] p-12 flex flex-col items-center text-center gap-6 border-2 border-solid
+    border-black rounded-2xl border-opacity-10 top-[-600%] transition-all duration-300
+    lg:hidden;
+    &.active {
+      @apply top-[115%];
+    }
+    div:nth-child(1) {
+      @apply flex flex-col gap-3;
+    }
+    div:nth-child(2) {
+      @apply flex gap-4 items-center;
+    }
+  }
+  .desktop-nav {
+    @apply hidden lg:flex gap-[3.75rem] hover:opacity-70 transition-all duration-300;
+  }
+  .desktop-social {
+    @apply hidden lg:flex gap-10 hover:opacity-70 transition-all duration-300;
+  }
+}
