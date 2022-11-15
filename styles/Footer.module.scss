@@ -1,5 +1,5 @@
 #footer {
-  @apply text-center flex flex-col items-center px-10 xl:px-20;
+  @apply text-center flex flex-col items-center px-10 xl:px-[5%];
   .upper {
     @apply flex flex-col items-center py-12 gap-4 border-b border-black border-solid border-opacity-10 lg:flex-row w-full
     lg:justify-between;

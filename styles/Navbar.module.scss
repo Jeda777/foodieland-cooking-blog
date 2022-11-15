@@ -1,6 +1,6 @@
 #navbar {
   @apply flex relative px-8 py-4 justify-between border-b border-black border-solid border-opacity-10 font-medium items-center
-  tracking-[-0.02em] lg:py-6 lg:px-12 xl:py-10 xl:px-20;
+  tracking-[-0.02em] lg:py-6 lg:px-12 xl:py-10 xl:px-[5%];
   button {
     @apply h-8 w-8 lg:hidden;
     img {
