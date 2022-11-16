@@ -9,8 +9,8 @@ const client = new MongoClient(URI)
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { id } = req.query
   if (typeof id === 'string' && ObjectId.isValid(id)) {
-    const db = client.db('Recipes')
-    const recipes = db.collection('1')
+    const db = client.db('Data')
+    const recipes = db.collection('recipes')
     const data = await recipes.findOne({ _id: new ObjectId(id) })
     if (data == null) {
       res.status(404).json('Not Found')
