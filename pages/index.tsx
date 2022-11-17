@@ -94,7 +94,7 @@ const Home: React.FC<Props> = ({ recipesData }) => {
         </div>
         <div className={style['categories-container']}>
           {categories.map((i) => (
-            <Category name={i.name} image={i.img} />
+            <Category key={i.name} name={i.name} image={i.img} />
           ))}
         </div>
       </section>

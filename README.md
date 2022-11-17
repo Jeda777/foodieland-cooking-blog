@@ -34,7 +34,6 @@ Cooking blog and recipe site that stores users, posts, and recipes on a database
 ## How to run
 
 ```
-// Use this command in client directory.
 npm run dev
 ```
 

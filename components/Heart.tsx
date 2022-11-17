@@ -30,9 +30,9 @@ const Heart: React.FC<Props> = ({ type, liked, setLiked }) => {
             width='40.25'
             height='38'
             filterUnits='userSpaceOnUse'
-            color-interpolation-filters='sRGB'
+            colorInterpolationFilters='sRGB'
           >
-            <feFlood flood-opacity='0' result='BackgroundImageFix' />
+            <feFlood floodOpacity='0' result='BackgroundImageFix' />
             <feColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha' />
             <feOffset dy='5' />
             <feGaussianBlur stdDeviation='5' />
