@@ -13,12 +13,15 @@ import {
   ads,
   everyoneCanBeAChefInTheirOwnKitchen,
   posts,
+  subscribe1,
+  subscribe2,
 } from '../assets'
 import Category from '../components/Category'
 import getServer from '../utils/getServer'
 import { Recipe } from '../mongodb'
 import RecipeCard from '../components/RecipeCard'
 import InstagramIcon from '../components/InstagramIcon'
+import { FormEvent } from 'react'
 
 type Props = {
   recipesData: Recipe[]
@@ -26,6 +29,11 @@ type Props = {
 
 const Home: React.FC<Props> = ({ recipesData }) => {
   let recipes = recipesData
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault()
+  }
+
   return (
     <>
       <Head>
@@ -152,6 +160,20 @@ const Home: React.FC<Props> = ({ recipesData }) => {
             }
           })}
         </div>
+      </section>
+
+      <section id={style.inbox}>
+        <h2>Deliciousness to your inbox</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut
+          enim ad minim{' '}
+        </p>
+        <form onSubmit={(e) => handleSubmit(e)}>
+          <input type='email' placeholder='Your email address...' required />
+          <button type='submit'>Subscribe</button>
+        </form>
+        <Image src={subscribe1} alt='vegetables' />
+        <Image src={subscribe2} alt='dish' />
       </section>
     </>
   )
