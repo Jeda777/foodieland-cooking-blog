@@ -17,7 +17,6 @@ import {
   subscribe2,
 } from '../assets'
 import Category from '../components/Category'
-import getServer from '../utils/getServer'
 import { Recipe } from '../mongodb'
 import RecipeCard from '../components/RecipeCard'
 import InstagramIcon from '../components/InstagramIcon'
@@ -27,8 +26,6 @@ import clientPromise from '../database/mongodb'
 type Props = {
   recipesData: Recipe[]
 }
-
-const server = getServer()
 
 const Home: React.FC<Props> = ({ recipesData }) => {
   let recipes = recipesData
@@ -111,7 +108,7 @@ const Home: React.FC<Props> = ({ recipesData }) => {
         <div className={style['recipes-container']}>
           {recipes.map((i: Recipe, index) => {
             if (index < 8) {
-              return <RecipeCard key={i._id} data={i} type={1} index={index} server={server} />
+              return <RecipeCard key={i._id} data={i} type={1} index={index} />
             }
           })}
           <Image className={style.ad} src={ads} alt='ad' />
@@ -159,7 +156,7 @@ const Home: React.FC<Props> = ({ recipesData }) => {
         <div className={style['recipes-container']}>
           {recipes.map((i: Recipe, index) => {
             if (index >= 8) {
-              return <RecipeCard key={i._id} data={i} type={2} index={index} server={server} />
+              return <RecipeCard key={i._id} data={i} type={2} index={index} />
             }
           })}
         </div>
