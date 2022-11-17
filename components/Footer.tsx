@@ -24,13 +24,13 @@ const Footer = () => {
           © 2020 Flowbase. Powered by <span>Webflow</span>
         </p>
         <div className={style.socials}>
-          <a href='#'>
+          <a>
             <Image src={facebook} alt='facebook' />
           </a>
-          <a href='#'>
+          <a>
             <Image src={twitter} alt='twitter' />
           </a>
-          <a href='#'>
+          <a>
             <InstagramIcon />
           </a>
         </div>

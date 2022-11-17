@@ -16,6 +16,6 @@
     @apply from-[#f09e001a];
   }
   p {
-    @apply font-semibold leading-[1.22em] tracking-[-0.02em] lg:text-lg;
+    @apply font-semibold leading-[1.22em] tracking-[-0.02em] lg:text-lg lg:leading-[1.22em];
   }
 }

@@ -22,13 +22,13 @@ const Navbar = () => {
           <a href='#'>About us</a>
         </div>
         <div>
-          <a href='#'>
+          <a>
             <Image src={facebook} alt='facebook' />
           </a>
-          <a href='#'>
+          <a>
             <Image src={twitter} alt='twitter' />
           </a>
-          <a href='#'>
+          <a>
             <InstagramIcon />
           </a>
         </div>
@@ -41,13 +41,13 @@ const Navbar = () => {
         <a href='#'>About us</a>
       </div>
       <div className={style['desktop-social']}>
-        <a href='#'>
+        <a>
           <Image src={facebook} alt='facebook' />
         </a>
-        <a href='#'>
+        <a>
           <Image src={twitter} alt='twitter' />
         </a>
-        <a href='#'>
+        <a>
           <InstagramIcon />
         </a>
       </div>

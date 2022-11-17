@@ -21,9 +21,12 @@
     }
   }
   .desktop-nav {
-    @apply hidden gap-[3.75rem] transition-all duration-300 hover:opacity-70 lg:flex;
+    @apply hidden gap-[3.75rem] lg:flex;
   }
   .desktop-social {
-    @apply hidden gap-10 transition-all duration-300 hover:opacity-70 lg:flex;
+    @apply hidden gap-10  lg:flex;
+  }
+  a {
+    @apply cursor-pointer transition-all duration-300 hover:opacity-70;
   }
 }

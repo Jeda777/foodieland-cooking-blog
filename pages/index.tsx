@@ -27,6 +27,8 @@ type Props = {
   recipesData: Recipe[]
 }
 
+const server = getServer()
+
 const Home: React.FC<Props> = ({ recipesData }) => {
   let recipes = recipesData
 
@@ -69,7 +71,7 @@ const Home: React.FC<Props> = ({ recipesData }) => {
             <div className={style.person}>
               <Image src={heroPerson} alt='person' />
               <div>
-                <p>John Smith</p>
+                <a>John Smith</a>
                 <p>15 March 2022</p>
               </div>
             </div>
@@ -108,7 +110,7 @@ const Home: React.FC<Props> = ({ recipesData }) => {
         <div className={style['recipes-container']}>
           {recipes.map((i: Recipe, index) => {
             if (index < 8) {
-              return <RecipeCard key={i._id} data={i} type={1} index={index} />
+              return <RecipeCard key={i._id} data={i} type={1} index={index} server={server} />
             }
           })}
           <Image className={style.ad} src={ads} alt='ad' />
@@ -156,7 +158,7 @@ const Home: React.FC<Props> = ({ recipesData }) => {
         <div className={style['recipes-container']}>
           {recipes.map((i: Recipe, index) => {
             if (index >= 8) {
-              return <RecipeCard key={i._id} data={i} type={2} index={index} />
+              return <RecipeCard key={i._id} data={i} type={2} index={index} server={server} />
             }
           })}
         </div>
@@ -180,7 +182,6 @@ const Home: React.FC<Props> = ({ recipesData }) => {
 }
 
 export async function getStaticProps() {
-  const server = getServer()
   const recipes: Recipe[] = await fetch(`${server}/api/recipes`)
     .then((res) => res.json())
     .then((res) => {

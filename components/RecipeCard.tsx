@@ -9,9 +9,10 @@ type Props = {
   type: number
   data: Recipe
   index: number
+  server: string | undefined
 }
 
-const RecipeCard: React.FC<Props> = ({ type, data, index }) => {
+const RecipeCard: React.FC<Props> = ({ type, data, index, server }) => {
   const [liked, setLiked] = useState(false)
   return (
     <div className={`${style['recipe-card']} ${type == 1 ? style[`o-${index}`] : ''}`} data-type={type}>
@@ -19,7 +20,7 @@ const RecipeCard: React.FC<Props> = ({ type, data, index }) => {
         <Image unoptimized src={data.images.main} width='1' height='1' alt={data.name} />
         <Heart type={type} liked={liked} setLiked={setLiked} />
       </div>
-      <div className={style['text-container']}>
+      <a href={`${server}/recipes/${data._id}`} className={style['text-container']}>
         <h6>{data.name}</h6>
         <div>
           <div>
@@ -31,7 +32,7 @@ const RecipeCard: React.FC<Props> = ({ type, data, index }) => {
             <p>{data.dish}</p>
           </div>
         </div>
-      </div>
+      </a>
     </div>
   )
 }
