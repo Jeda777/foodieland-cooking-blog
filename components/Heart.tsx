@@ -14,6 +14,7 @@ const Heart: React.FC<Props> = ({ type, liked, setLiked }) => {
         setLiked(!liked)
       }}
       data-type={type}
+      aria-label='like'
     >
       <svg width='48' height='48' viewBox='0 0 42 38' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <g filter='url(#filter0_d_101_793)'>
