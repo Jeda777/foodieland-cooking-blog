@@ -9,10 +9,10 @@ type props = {
 
 const Category: React.FC<props> = ({ name, image }) => {
   return (
-    <div className={`${style.category} ${style[`${name}`]}`}>
+    <a className={`${style.category} ${style[`${name}`]}`}>
       <Image src={image} alt={name} />
       <p>{name}</p>
-    </div>
+    </a>
   )
 }
 

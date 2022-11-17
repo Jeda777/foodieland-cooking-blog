@@ -1,5 +1,6 @@
 .category {
-  @apply flex h-48 w-40 flex-col items-center gap-[50px] rounded-[30px] bg-gradient-to-t to-transparent md:h-52 md:w-44;
+  @apply flex h-48 w-40 cursor-pointer flex-col items-center gap-[50px] rounded-[30px] bg-gradient-to-t to-transparent transition-all duration-300
+  hover:opacity-70 md:h-52 md:w-44;
   &.breakfast,
   &.lunch,
   &.chocolate {

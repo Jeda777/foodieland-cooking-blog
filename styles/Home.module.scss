@@ -90,8 +90,8 @@
       @apply text-3xl font-semibold leading-[1.21em] tracking-[-0.04em] lg:text-5xl;
     }
     a {
-      @apply rounded-2xl bg-brightBlue py-5 px-[1.75rem] text-sm font-semibold leading-[1.1875em] tracking-[-0.02em] transition-all
-      duration-300 hover:opacity-70 lg:text-base;
+      @apply cursor-pointer rounded-2xl bg-brightBlue py-5 px-[1.75rem] text-sm font-semibold leading-[1.1875em] tracking-[-0.02em]
+      transition-all duration-300 hover:opacity-70 lg:text-base;
     }
   }
   .categories-container {

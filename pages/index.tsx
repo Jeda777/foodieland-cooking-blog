@@ -9,12 +9,7 @@ import {
   timer,
   forkKnife,
   play,
-  breakfast,
-  vegan,
-  meat,
-  dessert,
-  lunch,
-  chocolate,
+  categories,
   ads,
 } from '../assets'
 import Category from '../components/Category'
@@ -82,15 +77,12 @@ const Home: React.FC<Props> = ({ recipesData }) => {
       <section id={style.categories}>
         <div className={style['title-container']}>
           <h2>Categories</h2>
-          <a href='#'>View All Categories</a>
+          <a>View All Categories</a>
         </div>
         <div className={style['categories-container']}>
-          <Category name='breakfast' image={breakfast} />
-          <Category name='vegan' image={vegan} />
-          <Category name='meat' image={meat} />
-          <Category name='dessert' image={dessert} />
-          <Category name='lunch' image={lunch} />
-          <Category name='chocolate' image={chocolate} />
+          {categories.map((i) => (
+            <Category name={i.name} image={i.img} />
+          ))}
         </div>
       </section>
 

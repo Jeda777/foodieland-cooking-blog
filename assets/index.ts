@@ -27,6 +27,15 @@ import timer from './Timer.svg'
 import twitter from './twitter.svg'
 import vegan from './vegan-min.png'
 
+const categories = [
+  { name: 'breakfast', img: breakfast },
+  { name: 'vegan', img: vegan },
+  { name: 'meat', img: meat },
+  { name: 'dessert', img: dessert },
+  { name: 'lunch', img: lunch },
+  { name: 'chocolate', img: chocolate },
+]
+
 export {
   ads,
   bakedChickenWingsAsianStyleTomatoesSaucePlate,
@@ -56,4 +65,5 @@ export {
   timer,
   twitter,
   vegan,
+  categories,
 }
