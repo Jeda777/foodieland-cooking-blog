@@ -1,5 +1,5 @@
 #hero {
-  @apply relative mx-auto flex w-[90%] flex-col-reverse before:absolute before:top-[2.5%] before:h-[95%]
+  @apply relative flex w-[90%] flex-col-reverse before:absolute before:top-[2.5%] before:h-[95%]
   before:rounded-r-[2rem] before:bg-brightBlue after:absolute after:top-[2.5%] after:h-[95%] after:rounded-l-[2rem] after:bg-brightBlue
   lg:grid lg:grid-cols-2;
   &::after,
@@ -83,7 +83,7 @@
 }
 
 #categories {
-  @apply mx-auto flex w-[90%] max-w-screen-xl flex-col items-center gap-10 text-center lg:gap-14 xl:gap-20;
+  @apply flex w-[90%] max-w-screen-xl flex-col items-center gap-10 text-center lg:gap-14 xl:gap-20;
   .title-container {
     @apply flex w-full flex-col gap-4 lg:flex-row lg:justify-between;
     a {
@@ -97,7 +97,7 @@
 }
 
 #recipes-1 {
-  @apply mx-auto flex w-[90%] max-w-screen-xl flex-col items-center gap-10 lg:gap-14 xl:gap-20;
+  @apply flex w-[90%] max-w-screen-xl flex-col items-center gap-10 lg:gap-14 xl:gap-20;
   .title-container {
     @apply flex flex-col items-center gap-6 text-center;
     p {
@@ -113,7 +113,7 @@
 }
 
 #everyone {
-  @apply mx-auto flex w-[90%] max-w-screen-xl flex-col items-center gap-11 text-center lg:grid lg:grid-cols-2 lg:text-left;
+  @apply flex w-[90%] max-w-screen-xl flex-col items-center gap-11 text-center lg:grid lg:grid-cols-2 lg:text-left;
   div {
     @apply flex max-w-[525px] flex-col items-center gap-4 lg:items-start lg:gap-6;
     p {
