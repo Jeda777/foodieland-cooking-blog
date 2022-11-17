@@ -1,6 +1,6 @@
 import { Recipe } from '../mongodb'
 import style from '../styles/RecipeCard.module.scss'
-import { bigAndJuicyWagyuBeefCheeseburger, timer, forkKnife } from '../assets/index'
+import { timer, forkKnife } from '../assets/index'
 import Image from 'next/image'
 
 type Props = {
@@ -13,7 +13,7 @@ const RecipeCard: React.FC<Props> = ({ type, data, index }) => {
   return (
     <div className={`${style['recipe-card']} ${style[`o-${index}`]}`} data-type={type}>
       <div className={style['img-container']}>
-        <Image src={bigAndJuicyWagyuBeefCheeseburger} alt='fd' />
+        <Image unoptimized src={data.images.main} width='1' height='1' alt={data.name} />
       </div>
       <div className={style['text-container']}>
         <h6>{data.name}</h6>
