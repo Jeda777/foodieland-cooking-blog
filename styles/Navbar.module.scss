@@ -8,9 +8,8 @@
     }
   }
   .mobile-nav {
-    @apply absolute left-[5%] top-[-600%] flex w-[90%] flex-col items-center gap-6 rounded-2xl border-2 border-solid border-black
-    border-opacity-10 bg-brightBlue p-12 text-center transition-all duration-300
-    lg:hidden;
+    @apply absolute left-[5%] top-[-600%] z-10 flex w-[90%] flex-col items-center gap-6 rounded-2xl border-2 border-solid
+    border-black border-opacity-10 bg-brightBlue p-12 text-center transition-all duration-300 lg:hidden;
     &.active {
       @apply top-[115%];
     }
