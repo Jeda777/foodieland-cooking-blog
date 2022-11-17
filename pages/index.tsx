@@ -11,6 +11,7 @@ import {
   play,
   categories,
   ads,
+  everyoneCanBeAChefInTheirOwnKitchen,
 } from '../assets'
 import Category from '../components/Category'
 import getServer from '../utils/getServer'
@@ -102,6 +103,18 @@ const Home: React.FC<Props> = ({ recipesData }) => {
           })}
           <Image className={style.ad} src={ads} alt='ad' />
         </div>
+      </section>
+
+      <section id={style.everyone}>
+        <div>
+          <h2>Everyone can be a chef in their own kitchen</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut
+            enim ad minim{' '}
+          </p>
+          <a>Learn More</a>
+        </div>
+        <Image src={everyoneCanBeAChefInTheirOwnKitchen} alt='chef with dish on plate' />
       </section>
     </>
   )

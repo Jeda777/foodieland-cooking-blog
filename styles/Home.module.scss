@@ -86,9 +86,6 @@
   @apply mx-auto flex w-[90%] max-w-screen-xl flex-col items-center gap-10 text-center lg:gap-14 xl:gap-20;
   .title-container {
     @apply flex w-full flex-col gap-4 lg:flex-row lg:justify-between;
-    h2 {
-      @apply text-3xl font-semibold leading-[1.21em] tracking-[-0.04em] lg:text-5xl;
-    }
     a {
       @apply cursor-pointer rounded-2xl bg-brightBlue py-5 px-[1.75rem] text-sm font-semibold leading-[1.1875em] tracking-[-0.02em]
       transition-all duration-300 hover:opacity-70 lg:text-base;
@@ -103,9 +100,6 @@
   @apply mx-auto flex w-[90%] max-w-screen-xl flex-col items-center gap-10 lg:gap-14 xl:gap-20;
   .title-container {
     @apply flex flex-col items-center gap-6 text-center;
-    h2 {
-      @apply text-3xl font-semibold leading-[1.21em] tracking-[-0.04em] lg:text-5xl;
-    }
     p {
       @apply text-sm leading-[1.75em] opacity-60 lg:text-base;
     }
@@ -114,6 +108,20 @@
     @apply grid grid-cols-1 items-center gap-4 sm:grid-cols-2 lg:gap-8 xl:grid-cols-3 xl:gap-10;
     .ad {
       @apply order-6 w-full max-w-[400px];
+    }
+  }
+}
+
+#everyone {
+  @apply mx-auto flex w-[90%] max-w-screen-xl flex-col items-center gap-11 text-center lg:grid lg:grid-cols-2 lg:text-left;
+  div {
+    @apply flex max-w-[525px] flex-col items-center gap-4 lg:items-start lg:gap-6;
+    p {
+      @apply text-sm leading-[1.75em] opacity-60 lg:text-base;
+    }
+    a {
+      @apply mt-4 w-max cursor-pointer rounded-2xl bg-black py-[22px] px-[53px] text-sm font-semibold leading-[17px]
+      tracking-[-0.02em] text-white transition-all duration-300 hover:opacity-70 lg:mt-12;
     }
   }
 }

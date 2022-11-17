@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
-@import url("https://stijndv.com/fonts/Eudoxus-Sans.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://stijndv.com/fonts/Eudoxus-Sans.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,7 +8,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 a {
@@ -23,4 +23,8 @@ body {
 
 main {
   @apply flex flex-col gap-40 py-10;
+}
+
+h2 {
+  @apply text-3xl font-semibold leading-[1.21em] tracking-[-0.04em] lg:text-5xl lg:leading-[1.21em];
 }
