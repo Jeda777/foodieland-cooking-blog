@@ -1,7 +1,8 @@
 import style from '../styles/Navbar.module.scss'
 import Image from 'next/image'
 import { useState } from 'react'
-import { logo, facebook, twitter, instagram, close, menu } from '../assets/index'
+import { logo, facebook, twitter, close, menu } from '../assets/index'
+import InstagramIcon from './InstagramIcon'
 
 const Navbar = () => {
   const [opened, setOpened] = useState(false)
@@ -28,7 +29,7 @@ const Navbar = () => {
             <Image src={twitter} alt='twitter' />
           </a>
           <a href='#'>
-            <Image src={instagram} alt='instagram' />
+            <InstagramIcon />
           </a>
         </div>
       </nav>
@@ -47,7 +48,7 @@ const Navbar = () => {
           <Image src={twitter} alt='twitter' />
         </a>
         <a href='#'>
-          <Image src={instagram} alt='instagram' />
+          <InstagramIcon />
         </a>
       </div>
     </header>

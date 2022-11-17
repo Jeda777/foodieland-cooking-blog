@@ -10,7 +10,6 @@ import forkKnife from './ForkKnife.svg'
 import handpickedRecipes from './handpicked-recipes.svg'
 import heart from './Heart.svg'
 import heroPerson from './hero-person-min.png'
-import instagram from './instagram.svg'
 import logo from './logo.svg'
 import lunch from './lunch-min.png'
 import meat from './meat-min.png'
@@ -51,7 +50,6 @@ export {
   handpickedRecipes,
   heart,
   heroPerson,
-  instagram,
   logo,
   lunch,
   meat,

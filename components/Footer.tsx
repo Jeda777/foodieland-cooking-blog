@@ -1,6 +1,7 @@
 import style from '../styles/Footer.module.scss'
-import { logo, facebook, twitter, instagram } from '../assets'
+import { logo, facebook, twitter } from '../assets'
 import Image from 'next/image'
+import InstagramIcon from './InstagramIcon'
 
 const Footer = () => {
   return (
@@ -30,7 +31,7 @@ const Footer = () => {
             <Image src={twitter} alt='twitter' />
           </a>
           <a href='#'>
-            <Image src={instagram} alt='instagram' />
+            <InstagramIcon />
           </a>
         </div>
       </div>

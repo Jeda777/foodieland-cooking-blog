@@ -13,12 +13,12 @@ import {
   ads,
   everyoneCanBeAChefInTheirOwnKitchen,
   posts,
-  instagram,
 } from '../assets'
 import Category from '../components/Category'
 import getServer from '../utils/getServer'
 import { Recipe } from '../mongodb'
 import RecipeCard from '../components/RecipeCard'
+import InstagramIcon from '../components/InstagramIcon'
 
 type Props = {
   recipesData: Recipe[]
@@ -133,7 +133,7 @@ const Home: React.FC<Props> = ({ recipesData }) => {
           ))}
         </div>
         <a>
-          Visit Our Instagram <Image src={instagram} alt='instagram' />
+          Visit Our Instagram <InstagramIcon />
         </a>
       </section>
     </>
