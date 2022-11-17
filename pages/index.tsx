@@ -12,6 +12,8 @@ import {
   categories,
   ads,
   everyoneCanBeAChefInTheirOwnKitchen,
+  posts,
+  instagram,
 } from '../assets'
 import Category from '../components/Category'
 import getServer from '../utils/getServer'
@@ -110,11 +112,29 @@ const Home: React.FC<Props> = ({ recipesData }) => {
           <h2>Everyone can be a chef in their own kitchen</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut
-            enim ad minim{' '}
+            enim ad minim
           </p>
           <a>Learn More</a>
         </div>
         <Image src={everyoneCanBeAChefInTheirOwnKitchen} alt='chef with dish on plate' />
+      </section>
+
+      <section id={style.posts}>
+        <div className={style['title-container']}>
+          <h2>Check out @foodieland on Instagram</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut
+            enim ad minim
+          </p>
+        </div>
+        <div className={style.posts}>
+          {posts.map((i, index) => (
+            <Image key={index} src={i} alt={`post ${index}`} />
+          ))}
+        </div>
+        <a>
+          Visit Our Instagram <Image src={instagram} alt='instagram' />
+        </a>
       </section>
     </>
   )

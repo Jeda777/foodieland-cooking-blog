@@ -125,3 +125,25 @@
     }
   }
 }
+
+#posts {
+  @apply flex w-full flex-col items-center gap-10 bg-gradient-to-t from-brightBlue to-transparent py-20
+  lg:gap-14 xl:gap-20;
+  padding-inline: 5%;
+  @media (min-width: 1423px) {
+    padding-inline: calc((100% - 1280px) / 2);
+  }
+  .title-container {
+    @apply flex flex-col items-center gap-6 text-center;
+    p {
+      @apply text-sm leading-[1.75em] opacity-60 lg:text-base;
+    }
+  }
+  .posts {
+    @apply flex flex-wrap justify-center gap-10;
+  }
+  a {
+    @apply mt-4 flex w-max cursor-pointer gap-4 rounded-2xl bg-black py-[22px] px-8 text-sm
+      font-semibold leading-[17px] tracking-[-0.02em] text-white transition-all duration-300 hover:opacity-70;
+  }
+}

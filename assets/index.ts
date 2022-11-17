@@ -36,6 +36,8 @@ const categories = [
   { name: 'chocolate', img: chocolate },
 ]
 
+const posts = [post1, post2, post3, post4]
+
 export {
   ads,
   bakedChickenWingsAsianStyleTomatoesSaucePlate,
@@ -56,10 +58,7 @@ export {
   menu,
   paper,
   play,
-  post1,
-  post2,
-  post3,
-  post4,
+  posts,
   subscribe1,
   subscribe2,
   timer,
