@@ -22,6 +22,7 @@ import { Recipe } from '../mongodb'
 import RecipeCard from '../components/RecipeCard'
 import InstagramIcon from '../components/InstagramIcon'
 import { FormEvent } from 'react'
+import clientPromise from '../database/mongodb'
 
 type Props = {
   recipesData: Recipe[]
@@ -182,11 +183,9 @@ const Home: React.FC<Props> = ({ recipesData }) => {
 }
 
 export async function getStaticProps() {
-  const recipes: Recipe[] = await fetch(`${server}/api/recipes`)
-    .then((res) => res.json())
-    .then((res) => {
-      return res
-    })
+  const client = await clientPromise
+  const data = await client.db('Data').collection('recipes').find().toArray()
+  const recipes: Recipe[] = JSON.parse(JSON.stringify(data))
   return {
     props: { recipesData: recipes },
   }
