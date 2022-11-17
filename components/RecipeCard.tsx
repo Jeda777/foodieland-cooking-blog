@@ -2,6 +2,8 @@ import { Recipe } from '../mongodb'
 import style from '../styles/RecipeCard.module.scss'
 import { timer, forkKnife } from '../assets/index'
 import Image from 'next/image'
+import Heart from './Heart'
+import { useState } from 'react'
 
 type Props = {
   type: number
@@ -10,10 +12,12 @@ type Props = {
 }
 
 const RecipeCard: React.FC<Props> = ({ type, data, index }) => {
+  const [liked, setLiked] = useState(false)
   return (
     <div className={`${style['recipe-card']} ${type == 1 ? style[`o-${index}`] : ''}`} data-type={type}>
       <div className={style['img-container']}>
         <Image unoptimized src={data.images.main} width='1' height='1' alt={data.name} />
+        <Heart type={type} liked={liked} setLiked={setLiked} />
       </div>
       <div className={style['text-container']}>
         <h6>{data.name}</h6>

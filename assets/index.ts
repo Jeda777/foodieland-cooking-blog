@@ -8,7 +8,6 @@ import everyoneCanBeAChefInTheirOwnKitchen from './everyone-can-be-a-chef-in-the
 import facebook from './facebook.svg'
 import forkKnife from './ForkKnife.svg'
 import handpickedRecipes from './handpicked-recipes.svg'
-import heart from './Heart.svg'
 import heroPerson from './hero-person-min.png'
 import logo from './logo.svg'
 import lunch from './lunch-min.png'
@@ -48,7 +47,6 @@ export {
   facebook,
   forkKnife,
   handpickedRecipes,
-  heart,
   heroPerson,
   logo,
   lunch,

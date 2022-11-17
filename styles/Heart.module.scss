@@ -1,0 +1,9 @@
+.heart {
+  @apply absolute top-9 right-9 flex h-12 w-12 items-center justify-center rounded-full bg-white;
+  svg {
+    @apply mt-3;
+  }
+  &[data-type='2'] {
+    @apply top-5 right-5;
+  }
+}

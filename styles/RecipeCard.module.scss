@@ -25,7 +25,7 @@
     order: 9;
   }
   .img-container {
-    @apply w-full px-4 pt-4;
+    @apply relative w-full px-4 pt-4;
     img {
       @apply w-full rounded-[20px];
     }
