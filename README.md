@@ -13,7 +13,7 @@ Cooking blog and recipe site that stores users, posts, and recipes on a database
 
 ## Links
 
-- [home]()
+- [home](https://hilarious-puppy-107ba1.netlify.app)
     <!-- - [/recipes]()
         - [/6373f9f4061fefa272437741]()
     - [/blog]()
@@ -23,13 +23,13 @@ Cooking blog and recipe site that stores users, posts, and recipes on a database
   - [not ready]()
     - [not ready]()
   - api
-    - [/recipes](/api/recipes)
-      - [/[id]](/api/recipes/6373f9f4061fefa272437741)
-    - [/blogPosts](/api/blogPosts)
-      - [/[id]](/api/blogPosts/63753427f2a719d3998759c3)
-      - [/user/[id]](/api/blogPosts/user/6375174af2a719d3998759bd)
-    - [/users](/api/users)
-      - [/[id]](/api/users/6375174af2a719d3998759bd)
+    - [/recipes](https://hilarious-puppy-107ba1.netlify.app/api/recipes)
+      - [/[id]](https://hilarious-puppy-107ba1.netlify.app/api/recipes/6373f9f4061fefa272437741)
+    - [/blogPosts](https://hilarious-puppy-107ba1.netlify.app/api/blogPosts)
+      - [/[id]](https://hilarious-puppy-107ba1.netlify.app/api/blogPosts/63753427f2a719d3998759c3)
+      - [/user/[id]](https://hilarious-puppy-107ba1.netlify.app/api/blogPosts/user/6375174af2a719d3998759bd)
+    - [/users](https://hilarious-puppy-107ba1.netlify.app/api/users)
+      - [/[id]](https://hilarious-puppy-107ba1.netlify.app/api/users/6375174af2a719d3998759bd)
 
 ## How to run
 
