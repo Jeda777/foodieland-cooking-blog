@@ -22,6 +22,9 @@ type Recipe = {
   time: number
   dish: string
   expand: RecipeExpand
+  images: {
+    main: string
+  }
 }
 
 type User = {
