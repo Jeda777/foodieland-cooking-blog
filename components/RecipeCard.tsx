@@ -10,7 +10,6 @@ type Props = {
 }
 
 const RecipeCard: React.FC<Props> = ({ type, data, index }) => {
-  console.log(index)
   return (
     <div className={`${style['recipe-card']} ${style[`o-${index}`]}`} data-type={type}>
       <div className={style['img-container']}>
