@@ -15,10 +15,19 @@ import {
   dessert,
   lunch,
   chocolate,
+  ads,
 } from '../assets'
 import Category from '../components/Category'
+import getServer from '../utils/getServer'
+import { Recipe } from '../mongodb'
+import RecipeCard from '../components/RecipeCard'
 
-export default function Home() {
+type Props = {
+  recipesData: Recipe[]
+}
+
+const Home: React.FC<Props> = ({ recipesData }) => {
+  let recipes = recipesData
   return (
     <>
       <Head>
@@ -84,6 +93,38 @@ export default function Home() {
           <Category name='chocolate' image={chocolate} />
         </div>
       </section>
+
+      <section id={style['recipes-1']}>
+        <div className={style['title-container']}>
+          <h2>Simple and tasty recipes</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut
+            enim ad minim
+          </p>
+        </div>
+        <div className={style['recipes-container']}>
+          {recipes.map((i: Recipe, index) => {
+            if (index < 8) {
+              return <RecipeCard key={i._id} data={i} type={1} index={index} />
+            }
+          })}
+          <Image className={style.ad} src={ads} alt='ad' />
+        </div>
+      </section>
     </>
   )
 }
+
+export async function getStaticProps() {
+  const server = getServer()
+  const recipes: Recipe[] = await fetch(`${server}/api/recipes`)
+    .then((res) => res.json())
+    .then((res) => {
+      return res
+    })
+  return {
+    props: { recipesData: recipes },
+  }
+}
+
+export default Home

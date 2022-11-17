@@ -83,7 +83,7 @@
 }
 
 #categories {
-  @apply mx-auto flex w-[90%] max-w-screen-xl flex-col items-center gap-10 text-center;
+  @apply mx-auto flex w-[90%] max-w-screen-xl flex-col items-center gap-10 text-center lg:gap-14 xl:gap-20;
   .title-container {
     @apply flex w-full flex-col gap-4 lg:flex-row lg:justify-between;
     h2 {
@@ -96,5 +96,24 @@
   }
   .categories-container {
     @apply flex flex-wrap justify-center gap-10;
+  }
+}
+
+#recipes-1 {
+  @apply mx-auto flex w-[90%] max-w-screen-xl flex-col items-center gap-10 lg:gap-14 xl:gap-20;
+  .title-container {
+    @apply flex flex-col items-center gap-6 text-center;
+    h2 {
+      @apply text-3xl font-semibold leading-[1.21em] tracking-[-0.04em] lg:text-5xl;
+    }
+    p {
+      @apply text-sm leading-[1.75em] opacity-60 lg:text-base;
+    }
+  }
+  .recipes-container {
+    @apply grid grid-cols-1 items-center gap-4 sm:grid-cols-2 lg:gap-8 xl:grid-cols-3 xl:gap-10;
+    .ad {
+      @apply order-6 w-full max-w-[400px];
+    }
   }
 }

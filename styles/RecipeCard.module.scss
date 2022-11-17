@@ -1,0 +1,51 @@
+.recipe-card {
+  @apply flex max-w-[400px] flex-col items-center rounded-[30px] bg-gradient-to-t from-brightBlue to-transparent;
+  &.o-0 {
+    order: 1;
+  }
+  &.o-1 {
+    order: 2;
+  }
+  &.o-2 {
+    order: 3;
+  }
+  &.o-3 {
+    order: 4;
+  }
+  &.o-4 {
+    order: 5;
+  }
+  &.o-5 {
+    order: 7;
+  }
+  &.o-6 {
+    order: 8;
+  }
+  &.o-7 {
+    order: 9;
+  }
+  .img-container {
+    @apply w-full px-4 pt-4;
+    img {
+      @apply w-full rounded-[20px];
+    }
+  }
+  .text-container {
+    @apply flex flex-col gap-6 px-6 pt-6 pb-8;
+    h6 {
+      @apply text-2xl font-semibold tracking-[-0.04em];
+    }
+    div {
+      @apply flex gap-4;
+      div {
+        @apply flex items-center gap-2.5;
+        img {
+          @apply w-[18px];
+        }
+        p {
+          @apply text-sm leading-[1.21em] tracking-[-0.02em];
+        }
+      }
+    }
+  }
+}
