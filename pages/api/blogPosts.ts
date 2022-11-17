@@ -1,16 +1,9 @@
-import { MongoClient } from 'mongodb'
+import clientPromise from '../../database/mongodb'
 import { NextApiRequest, NextApiResponse } from 'next'
 
-const password = process.env.DB_PASS
-const passToSend = encodeURIComponent(password || '')
-const URI = `mongodb+srv://admin:${passToSend}@cluster0.lhg3cmk.mongodb.net/?retryWrites=true&w=majority`
-const client = new MongoClient(URI)
-
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  const db = client.db('Data')
-  const recipes = db.collection('blogPosts')
-  const cursor = recipes.find()
-  const data = await cursor.toArray()
+  const client = await clientPromise
+  const data = await client.db('Data').collection('blogPosts').find().toArray()
   res.status(200).json(data)
 }
 
