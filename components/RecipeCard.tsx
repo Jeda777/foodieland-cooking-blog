@@ -11,7 +11,7 @@ type Props = {
 
 const RecipeCard: React.FC<Props> = ({ type, data, index }) => {
   return (
-    <div className={`${style['recipe-card']} ${style[`o-${index}`]}`} data-type={type}>
+    <div className={`${style['recipe-card']} ${type == 1 ? style[`o-${index}`] : ''}`} data-type={type}>
       <div className={style['img-container']}>
         <Image unoptimized src={data.images.main} width='1' height='1' alt={data.name} />
       </div>

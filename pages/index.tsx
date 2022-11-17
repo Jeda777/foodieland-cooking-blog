@@ -136,6 +136,23 @@ const Home: React.FC<Props> = ({ recipesData }) => {
           Visit Our Instagram <InstagramIcon />
         </a>
       </section>
+
+      <section id={style['recipes-2']}>
+        <div className={style['title-container']}>
+          <h2>Try this delicious recipe to make your day</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut
+            enim ad minim
+          </p>
+        </div>
+        <div className={style['recipes-container']}>
+          {recipes.map((i: Recipe, index) => {
+            if (index >= 8) {
+              return <RecipeCard key={i._id} data={i} type={2} index={index} />
+            }
+          })}
+        </div>
+      </section>
     </>
   )
 }

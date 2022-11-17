@@ -1,5 +1,5 @@
 .recipe-card {
-  @apply flex max-w-[400px] flex-col items-center rounded-[30px] bg-gradient-to-t from-brightBlue to-transparent;
+  @apply flex h-full max-w-[400px] flex-col items-center rounded-[30px] bg-gradient-to-t from-brightBlue to-transparent;
   &.o-0 {
     order: 1;
   }
@@ -36,16 +36,25 @@
       @apply text-2xl font-semibold tracking-[-0.04em];
     }
     div {
-      @apply flex gap-4;
+      @apply flex gap-6;
       div {
         @apply flex items-center gap-2.5;
         img {
           @apply w-[18px];
         }
         p {
-          @apply text-sm leading-[1.21em] tracking-[-0.02em];
+          @apply text-sm leading-[1.21em] tracking-[-0.02em] opacity-60;
         }
       }
+    }
+  }
+  &[data-type='2'] {
+    @apply max-w-[290px] bg-none;
+    .img-container {
+      @apply p-0;
+    }
+    .text-container {
+      @apply p-0 pt-4;
     }
   }
 }
