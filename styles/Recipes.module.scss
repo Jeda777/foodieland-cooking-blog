@@ -1,0 +1,12 @@
+#recipes {
+  @apply flex w-[90%] max-w-screen-xl flex-col items-center gap-10 text-center lg:gap-14 xl:gap-20;
+  header {
+    @apply flex flex-col gap-6;
+    h1 {
+      @apply text-4xl font-semibold leading-[1.2em] tracking-[-0.04em] md:text-5xl md:leading-[1.2em] 2xl:text-[4rem] 2xl:leading-[1.2em];
+    }
+    p {
+      @apply leading-[1.75em] opacity-60;
+    }
+  }
+}
