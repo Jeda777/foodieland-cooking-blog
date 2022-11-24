@@ -11,12 +11,12 @@ const recipes = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <section id={style.recipes}>
-        <header>
-          <h1>Recipes</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-        </header>
-      </section>
+      <header id={style.header}>
+        <h1>Recipes</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+      </header>
+
+      <section id={style.recipes}></section>
 
       <Inbox />
     </>
