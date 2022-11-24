@@ -15,8 +15,8 @@ const Navbar = () => {
       <Image src={logo} alt='foodieland.' />
       <nav className={`${opened ? style.active : ''} ${style['mobile-nav']}`}>
         <div>
-          <a href='#'>Home</a>
-          <a href='#'>Recipes</a>
+          <a href='/'>Home</a>
+          <a href='/recipes'>Recipes</a>
           <a href='#'>Blog</a>
           <a href='#'>Contact</a>
           <a href='#'>About us</a>
@@ -34,8 +34,8 @@ const Navbar = () => {
         </div>
       </nav>
       <div className={style['desktop-nav']}>
-        <a href='#'>Home</a>
-        <a href='#'>Recipes</a>
+        <a href='/'>Home</a>
+        <a href='/recipes'>Recipes</a>
         <a href='#'>Blog</a>
         <a href='#'>Contact</a>
         <a href='#'>About us</a>
