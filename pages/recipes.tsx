@@ -1,8 +1,14 @@
 import Head from 'next/head'
 import Inbox from '../components/Inbox'
+import clientPromise from '../database/mongodb'
 import style from '../styles/Recipes.module.scss'
+import { Recipe } from '../mongodb'
 
-const recipes = () => {
+type Props = {
+  recipesData: Recipe[]
+}
+
+const recipes: React.FC<Props> = ({ recipesData }) => {
   return (
     <>
       <Head>
@@ -21,6 +27,15 @@ const recipes = () => {
       <Inbox />
     </>
   )
+}
+
+export async function getServerSideProps() {
+  const client = await clientPromise
+  const data = await client.db('Data').collection('recipes').find().toArray()
+  const recipes: Recipe[] = JSON.parse(JSON.stringify(data))
+  return {
+    props: { recipesData: recipes },
+  }
 }
 
 export default recipes

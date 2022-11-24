@@ -26,8 +26,6 @@ type Props = {
 }
 
 const Home: React.FC<Props> = ({ recipesData }) => {
-  let recipes = recipesData
-
   return (
     <>
       <Head>
@@ -100,7 +98,7 @@ const Home: React.FC<Props> = ({ recipesData }) => {
           </p>
         </div>
         <div className={style['recipes-container']}>
-          {recipes.map((i: Recipe, index) => {
+          {recipesData.map((i: Recipe, index) => {
             if (index < 8) {
               return <RecipeCard key={i._id} data={i} type={1} index={index} />
             }
@@ -148,7 +146,7 @@ const Home: React.FC<Props> = ({ recipesData }) => {
           </p>
         </div>
         <div className={style['recipes-container']}>
-          {recipes.map((i: Recipe, index) => {
+          {recipesData.map((i: Recipe, index) => {
             if (index >= 8) {
               return <RecipeCard key={i._id} data={i} type={2} index={index} />
             }
