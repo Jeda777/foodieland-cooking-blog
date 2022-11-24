@@ -165,29 +165,3 @@
     }
   }
 }
-
-#inbox {
-  @apply relative flex w-[90%] max-w-screen-xl flex-col items-center gap-6 overflow-hidden rounded-[60px] bg-brightBlue py-20 px-4
-  text-center;
-  p {
-    @apply z-10 max-w-[620px] text-sm leading-[1.75em] lg:text-base lg:leading-[1.75em] lg:opacity-60;
-  }
-  form {
-    @apply z-10 mt-12 flex flex-col gap-6 rounded-3xl sm:flex-row sm:gap-0 sm:bg-white sm:p-2.5 sm:pl-7;
-    input {
-      @apply w-64 rounded-2xl p-5 text-sm font-medium leading-[1.21em] tracking-[-0.02em] sm:p-1;
-    }
-    button {
-      @apply rounded-2xl bg-black py-[21px] px-[46px] text-sm font-semibold leading-[1.21em] tracking-[-0.02em] text-white;
-    }
-  }
-  img {
-    @apply absolute;
-  }
-  img:nth-child(4) {
-    @apply left-0 top-0 rotate-90;
-  }
-  img:nth-child(5) {
-    @apply right-0 bottom-0;
-  }
-}
