@@ -9,5 +9,5 @@
 }
 
 #recipes {
-  @apply flex w-[90%] max-w-screen-xl flex-wrap items-center gap-10 text-center lg:gap-14 xl:gap-20;
+  @apply flex w-[90%] max-w-screen-xl flex-wrap items-center justify-center gap-4 text-center lg:gap-8 xl:gap-10;
 }

@@ -3,6 +3,7 @@ import Inbox from '../components/Inbox'
 import clientPromise from '../database/mongodb'
 import style from '../styles/Recipes.module.scss'
 import { Recipe } from '../mongodb'
+import RecipeCard from '../components/RecipeCard'
 
 type Props = {
   recipesData: Recipe[]
@@ -22,7 +23,11 @@ const recipes: React.FC<Props> = ({ recipesData }) => {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
       </header>
 
-      <section id={style.recipes}></section>
+      <section id={style.recipes}>
+        {recipesData.map((i: Recipe, index) => {
+          return <RecipeCard key={i._id} data={i} type={1} index={index} />
+        })}
+      </section>
 
       <Inbox />
     </>
