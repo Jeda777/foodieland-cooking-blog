@@ -1,0 +1,10 @@
+#pagination {
+  @apply flex gap-4;
+  a {
+    @apply flex h-16 w-16 items-center justify-center rounded-2xl border border-solid border-black border-opacity-50
+        bg-white text-lg leading-[22px] text-black transition-all duration-300 hover:opacity-70;
+    &.active {
+      @apply bg-black text-white;
+    }
+  }
+}

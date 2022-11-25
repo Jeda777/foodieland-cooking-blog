@@ -5,13 +5,17 @@ import style from '../../styles/Recipes.module.scss'
 import { Recipe } from '../../mongodb'
 import RecipeCard from '../../components/RecipeCard'
 import { GetServerSideProps } from 'next'
+import Pagination from '../../components/Pagination'
 
 type Props = {
   recipesData: Recipe[]
   count: number
+  page: string | string[]
 }
 
-const recipes: React.FC<Props> = ({ recipesData, count }) => {
+const recipes: React.FC<Props> = ({ recipesData, count, page }) => {
+  const pageCount = Math.floor(count / 9) + 1
+  const pageNumber = Number(page)
   return (
     <>
       <Head>
@@ -31,12 +35,16 @@ const recipes: React.FC<Props> = ({ recipesData, count }) => {
         })}
       </section>
 
+      <Pagination count={pageCount} page={pageNumber} />
+
       <Inbox />
     </>
   )
 }
 
-export const getServerSideProps: GetServerSideProps<{ recipesData: Recipe[]; count: number }> = async (context) => {
+export const getServerSideProps: GetServerSideProps<{ recipesData: Recipe[]; count: number; page: string | string[] }> = async (
+  context,
+) => {
   let { page } = context.query
   if (page === undefined) page = '1'
   const client = await clientPromise
@@ -51,7 +59,7 @@ export const getServerSideProps: GetServerSideProps<{ recipesData: Recipe[]; cou
     .toArray()
   const recipes: Recipe[] = JSON.parse(JSON.stringify(data))
   return {
-    props: { recipesData: recipes, count: count },
+    props: { recipesData: recipes, count: count, page: page },
   }
 }
 
