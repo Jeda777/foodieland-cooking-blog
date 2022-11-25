@@ -14,11 +14,11 @@ Cooking blog and recipe site that stores users, posts, and recipes on a database
 ## Links
 
 - [home](https://hilarious-puppy-107ba1.netlify.app)
-    <!-- - [/recipes]()
+    <!--
         - [/6373f9f4061fefa272437741]()
     - [/blog]()
         - [/63753427f2a719d3998759c3]() -->
-  - [not ready]()
+  - [/recipes](https://hilarious-puppy-107ba1.netlify.app/recipes)
     - [not ready]()
   - [not ready]()
     - [not ready]()
