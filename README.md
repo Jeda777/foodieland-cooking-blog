@@ -50,4 +50,7 @@ npm run dev
 ### Home
 
 ![](./screenshots/screenshotHome.png)
+
+### Recipes page
+
 ![](./screenshots/screenshotRecipes.png)
