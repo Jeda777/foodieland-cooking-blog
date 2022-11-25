@@ -1,8 +1,9 @@
 #pagination {
-  @apply flex gap-4;
+  @apply -mt-12 flex gap-4;
   a {
-    @apply flex h-16 w-16 items-center justify-center rounded-2xl border border-solid border-black border-opacity-50
-        bg-white text-lg leading-[22px] text-black transition-all duration-300 hover:opacity-70;
+    @apply flex h-8 w-8 items-center justify-center rounded-xl border border-solid border-black border-opacity-50 bg-white
+    text-sm leading-[22px] text-black transition-all duration-300 hover:opacity-70 md:h-16 md:w-16 md:rounded-2xl md:text-lg
+    md:leading-[22px];
     &.active {
       @apply bg-black text-white;
     }
