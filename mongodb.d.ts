@@ -18,6 +18,7 @@ type RecipeExpand = {
 
 type Recipe = {
   _id: string
+  id: number
   name: string
   time: number
   dish: string
