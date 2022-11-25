@@ -6,7 +6,6 @@ type Props = {
 }
 
 const Pagination: React.FC<Props> = ({ count, page }) => {
-  console.log(page)
   return (
     <div id={style.pagination}>
       {count < 6
