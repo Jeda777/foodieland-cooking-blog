@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import Inbox from '../components/Inbox'
-import clientPromise from '../database/mongodb'
-import style from '../styles/Recipes.module.scss'
-import { Recipe } from '../mongodb'
-import RecipeCard from '../components/RecipeCard'
+import Inbox from '../../components/Inbox'
+import clientPromise from '../../database/mongodb'
+import style from '../../styles/Recipes.module.scss'
+import { Recipe } from '../../mongodb'
+import RecipeCard from '../../components/RecipeCard'
 
 type Props = {
   recipesData: Recipe[]
