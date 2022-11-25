@@ -4,12 +4,14 @@ import clientPromise from '../../database/mongodb'
 import style from '../../styles/Recipes.module.scss'
 import { Recipe } from '../../mongodb'
 import RecipeCard from '../../components/RecipeCard'
+import { GetServerSideProps } from 'next'
 
 type Props = {
   recipesData: Recipe[]
+  count: number
 }
 
-const recipes: React.FC<Props> = ({ recipesData }) => {
+const recipes: React.FC<Props> = ({ recipesData, count }) => {
   return (
     <>
       <Head>
@@ -25,7 +27,7 @@ const recipes: React.FC<Props> = ({ recipesData }) => {
 
       <section id={style.recipes}>
         {recipesData.map((i: Recipe, index) => {
-          return <RecipeCard key={i._id} data={i} type={1} index={index} />
+          return <RecipeCard key={i._id} data={i} type={3} index={index} />
         })}
       </section>
 
@@ -34,12 +36,22 @@ const recipes: React.FC<Props> = ({ recipesData }) => {
   )
 }
 
-export async function getServerSideProps() {
+export const getServerSideProps: GetServerSideProps<{ recipesData: Recipe[]; count: number }> = async (context) => {
+  let { page } = context.query
+  if (page === undefined) page = '1'
   const client = await clientPromise
-  const data = await client.db('Data').collection('recipes').find().toArray()
+  const count = await client.db('Data').collection('recipes').countDocuments()
+  const lt = count + 1 - (Number(page) - 1) * 9
+  const gt = lt - 10
+  const data = await client
+    .db('Data')
+    .collection('recipes')
+    .find({ id: { $gt: gt, $lt: lt } })
+    .sort({ id: -1 })
+    .toArray()
   const recipes: Recipe[] = JSON.parse(JSON.stringify(data))
   return {
-    props: { recipesData: recipes },
+    props: { recipesData: recipes, count: count },
   }
 }
 
