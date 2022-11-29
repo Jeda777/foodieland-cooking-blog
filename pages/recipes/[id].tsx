@@ -2,13 +2,19 @@ import { ObjectId } from 'mongodb'
 import { GetServerSideProps } from 'next'
 import { Recipe } from '../../mongodb'
 import clientPromise from '../../database/mongodb'
+import Inbox from '../../components/Inbox'
 
 type Props = {
   recipe: Recipe
 }
 
 const id: React.FC<Props> = ({ recipe }) => {
-  return <div>{recipe.name}</div>
+  return (
+    <>
+      {recipe.name}
+      <Inbox />
+    </>
+  )
 }
 
 export const getServerSideProps: GetServerSideProps<{ recipe: Recipe }> = async (context) => {
