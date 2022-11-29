@@ -18,7 +18,7 @@
           div {
             @apply flex flex-col justify-between;
             p:nth-child(1) {
-              @apply text-sm font-bold leading-[1.19em] tracking-[-0.02em] lg:text-base lg:leading-[1.19em];
+              @apply mb-1 text-sm font-bold leading-[1.19em] tracking-[-0.02em] lg:text-base lg:leading-[1.19em];
             }
             p:nth-child(2) {
               @apply text-xs font-normal leading-[1.21em] tracking-[-0.02em] opacity-60 lg:text-sm lg:leading-[1.21em];
@@ -31,7 +31,7 @@
         div {
           @apply flex flex-col justify-between;
           p:nth-child(1) {
-            @apply text-[12px] font-normal leading-[1.25em] tracking-[0.1em];
+            @apply mb-1 text-[12px] font-normal leading-[1.25em] tracking-[0.1em];
           }
           p:nth-child(2) {
             @apply text-xs font-normal leading-[1.21em] tracking-[-0.02em] opacity-60 lg:text-sm lg:leading-[1.21em];
