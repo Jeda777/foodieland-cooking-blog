@@ -7,6 +7,7 @@ import YouMayLikeTheseRecipesToo from '../../components/YouMayLikeTheseRecipesTo
 import style from '../../styles/RecipeDetails.module.scss'
 import Image from 'next/image'
 import { timer, forkKnife, printer, share } from '../../assets/index'
+import moment from 'moment'
 
 type Props = {
   recipe: Recipe
@@ -16,7 +17,6 @@ type Props = {
 
 const id: React.FC<Props> = ({ recipe, user, recipesData }) => {
   if (recipe.expand === null) throw new Error('Recipe dont have details')
-  const date = new Date(recipe.expand.date)
   return (
     <>
       <section id={style['recipe-details']}>
@@ -28,7 +28,7 @@ const id: React.FC<Props> = ({ recipe, user, recipesData }) => {
                 <Image alt='user photo' unoptimized width='1' height='1' src={user.images.main} />
                 <div>
                   <p>John Smith</p>
-                  <p>{date.toLocaleDateString()}</p>
+                  <p>{moment(recipe.expand.date).format('D MMMM YYYY')}</p>
                 </div>
               </div>
               <div className={style.time}>
