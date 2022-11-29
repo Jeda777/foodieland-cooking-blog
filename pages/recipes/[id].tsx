@@ -3,16 +3,19 @@ import { GetServerSideProps } from 'next'
 import { Recipe } from '../../mongodb'
 import clientPromise from '../../database/mongodb'
 import Inbox from '../../components/Inbox'
+import YouMayLikeTheseRecipesToo from '../../components/YouMayLikeTheseRecipesToo'
 
 type Props = {
   recipe: Recipe
+  recipesData: Recipe[]
 }
 
-const id: React.FC<Props> = ({ recipe }) => {
+const id: React.FC<Props> = ({ recipe, recipesData }) => {
   return (
     <>
       {recipe.name}
       <Inbox />
+      <YouMayLikeTheseRecipesToo recipesData={recipesData} />
     </>
   )
 }
@@ -31,9 +34,12 @@ export const getServerSideProps: GetServerSideProps<{ recipe: Recipe }> = async 
         notFound: true,
       }
     } else {
+      const recipesOriginalData = await client.db('Data').collection('recipes').find().limit(4).toArray()
+      const recipesData: Recipe[] = await JSON.parse(JSON.stringify(recipesOriginalData))
       return {
         props: {
           recipe: recipe,
+          recipesData: recipesData,
         },
       }
     }
