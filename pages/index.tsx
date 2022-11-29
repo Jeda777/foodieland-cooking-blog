@@ -147,7 +147,7 @@ const Home: React.FC<Props> = ({ recipesData }) => {
         </div>
         <div className={style['recipes-container']}>
           {recipesData.map((i: Recipe, index) => {
-            if (index >= 8) {
+            if (index >= 8 && index <= 15) {
               return <RecipeCard key={i._id} data={i} type={2} index={index} />
             }
           })}
