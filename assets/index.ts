@@ -24,6 +24,8 @@ import subscribe2 from './subscribe-2-min.png'
 import timer from './Timer.svg'
 import twitter from './twitter.svg'
 import vegan from './vegan-min.png'
+import printer from './printer.svg'
+import share from './share.svg'
 
 const categories = [
   { name: 'breakfast', img: breakfast },
@@ -61,4 +63,6 @@ export {
   twitter,
   vegan,
   categories,
+  printer,
+  share,
 }
