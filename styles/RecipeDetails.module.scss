@@ -1,0 +1,61 @@
+#recipe-details {
+  @apply mt-10 flex w-[90%] max-w-screen-xl flex-col items-center gap-4;
+  header {
+    @apply flex flex-col items-center gap-8 lg:flex-row lg:justify-between;
+    .left {
+      @apply flex flex-col gap-8 lg:max-w-[70%] lg:gap-12;
+      h1 {
+        @apply text-center text-3xl font-semibold leading-[1.21em] tracking-[-0.04em] md:text-4xl md:leading-[1.21em] lg:text-left
+        lg:text-5xl lg:leading-[1.21em] xl:text-[4rem] xl:leading-[1.21em];
+      }
+      .additional-info {
+        @apply flex w-full flex-wrap items-center gap-8;
+        .user-info {
+          @apply flex items-center gap-4;
+          img {
+            @apply h-12 w-12 rounded-full;
+          }
+          div {
+            @apply flex flex-col justify-between;
+            p:nth-child(1) {
+              @apply text-sm font-bold leading-[1.19em] tracking-[-0.02em] lg:text-base lg:leading-[1.19em];
+            }
+            p:nth-child(2) {
+              @apply text-xs font-normal leading-[1.21em] tracking-[-0.02em] opacity-60 lg:text-sm lg:leading-[1.21em];
+            }
+          }
+        }
+      }
+      .time {
+        @apply flex h-max items-center gap-4 border-l border-solid border-l-black border-opacity-50 pl-8;
+        div {
+          @apply flex flex-col justify-between;
+          p:nth-child(1) {
+            @apply text-[12px] font-normal leading-[1.25em] tracking-[0.1em];
+          }
+          p:nth-child(2) {
+            @apply text-xs font-normal leading-[1.21em] tracking-[-0.02em] opacity-60 lg:text-sm lg:leading-[1.21em];
+          }
+        }
+      }
+      .dish {
+        @apply flex items-center gap-4 border-l border-solid border-l-black border-opacity-50 pl-8;
+        p {
+          @apply text-xs font-normal leading-[1.21em] tracking-[-0.02em] opacity-60 lg:text-sm lg:leading-[1.21em];
+        }
+      }
+    }
+    .right {
+      @apply flex items-center gap-8 text-center;
+      div {
+        @apply flex flex-col gap-4;
+        button {
+          @apply flex h-14 w-14 items-center justify-center rounded-full bg-brightBlue lg:h-20 lg:w-20;
+        }
+        p {
+          @apply text-xs font-normal uppercase tracking-widest;
+        }
+      }
+    }
+  }
+}

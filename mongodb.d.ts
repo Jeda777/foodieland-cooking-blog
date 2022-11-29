@@ -32,6 +32,9 @@ type User = {
   _id: string
   name: string
   surname: string
+  images: {
+    main: string
+  }
 }
 
 type BlogPostExpand = {

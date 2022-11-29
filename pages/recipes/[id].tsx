@@ -1,19 +1,72 @@
 import { ObjectId } from 'mongodb'
 import { GetServerSideProps } from 'next'
-import { Recipe } from '../../mongodb'
+import { Recipe, User } from '../../mongodb'
 import clientPromise from '../../database/mongodb'
 import Inbox from '../../components/Inbox'
 import YouMayLikeTheseRecipesToo from '../../components/YouMayLikeTheseRecipesToo'
+import style from '../../styles/RecipeDetails.module.scss'
+import Image from 'next/image'
+import { timer, forkKnife, printer, share } from '../../assets/index'
 
 type Props = {
   recipe: Recipe
+  user: User
   recipesData: Recipe[]
 }
 
-const id: React.FC<Props> = ({ recipe, recipesData }) => {
+const id: React.FC<Props> = ({ recipe, user, recipesData }) => {
+  if (recipe.expand === null) throw new Error('Recipe dont have details')
+  const date = new Date(recipe.expand.date)
   return (
     <>
-      {recipe.name}
+      <section id={style['recipe-details']}>
+        <header>
+          <div className={style.left}>
+            <h1>{recipe.name}</h1>
+            <div className={style['additional-info']}>
+              <div className={style['user-info']}>
+                <Image alt='user photo' unoptimized width='1' height='1' src={user.images.main} />
+                <div>
+                  <p>John Smith</p>
+                  <p>{date.toLocaleDateString()}</p>
+                </div>
+              </div>
+              <div className={style.time}>
+                <Image alt='timer' src={timer} />
+                <div>
+                  <p>Prep Time</p>
+                  <p>{recipe.expand.prepTime} Minutes</p>
+                </div>
+              </div>
+              <div className={style.time}>
+                <Image alt='timer' src={timer} />
+                <div>
+                  <p>Cock Time</p>
+                  <p>{recipe.expand.cookTime} Minutes</p>
+                </div>
+              </div>
+              <div className={style.dish}>
+                <Image alt='fork and knife' src={forkKnife} />
+                <p>{recipe.dish}</p>
+              </div>
+            </div>
+          </div>
+          <div className={style.right}>
+            <div>
+              <button>
+                <Image alt='print' src={printer} />
+              </button>
+              <p>PRINT</p>
+            </div>
+            <div>
+              <button>
+                <Image alt='share' src={share} />
+              </button>
+              <p>SHARE</p>
+            </div>
+          </div>
+        </header>
+      </section>
       <Inbox />
       <YouMayLikeTheseRecipesToo recipesData={recipesData} />
     </>
@@ -36,9 +89,15 @@ export const getServerSideProps: GetServerSideProps<{ recipe: Recipe }> = async 
     } else {
       const recipesOriginalData = await client.db('Data').collection('recipes').find().limit(4).toArray()
       const recipesData: Recipe[] = await JSON.parse(JSON.stringify(recipesOriginalData))
+      const userData = await client
+        .db('Data')
+        .collection('users')
+        .findOne({ _id: new ObjectId(recipe.expand.authorID) })
+      const user: User = await JSON.parse(JSON.stringify(userData))
       return {
         props: {
           recipe: recipe,
+          user: user,
           recipesData: recipesData,
         },
       }
