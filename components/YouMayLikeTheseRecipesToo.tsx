@@ -1,7 +1,6 @@
 import style from '../styles/YouMayLikeTheseRecipesToo.module.scss'
 import { Recipe } from '../mongodb'
 import RecipeCard from './RecipeCard'
-import clientPromise from '../database/mongodb'
 
 type Props = {
   recipesData: Recipe[]
