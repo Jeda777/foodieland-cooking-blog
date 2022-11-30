@@ -17,6 +17,7 @@ type Props = {
 
 const id: React.FC<Props> = ({ recipe, user, recipesData }) => {
   if (recipe.expand === null) throw new Error('Recipe dont have details')
+  const nutritions = ['Calories', 'Total Fat', 'Protein', 'CarboHydrate', 'Cholesterol']
   return (
     <>
       <section id={style['recipe-details']}>
@@ -66,6 +67,24 @@ const id: React.FC<Props> = ({ recipe, user, recipesData }) => {
             </div>
           </div>
         </header>
+
+        <div className={style['main-info']}>
+          <div className={style['img-container']}>
+            <Image alt={recipe.name} src={recipe.images.main} unoptimized width='1' height='1' />
+          </div>
+          <div className={style['info-container']}>
+            <h3>Nutrition Information</h3>
+            <div className={style.nutritions}>
+              {nutritions.map((i, index) => (
+                <div key={i}>
+                  <p>{i}</p>
+                  <p>{recipe.expand?.nutritions[index]}</p>
+                </div>
+              ))}
+            </div>
+            <p className={style.text}>adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          </div>
+        </div>
       </section>
       <Inbox />
       <YouMayLikeTheseRecipesToo recipesData={recipesData} />
