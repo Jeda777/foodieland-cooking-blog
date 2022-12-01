@@ -57,4 +57,4 @@ npm run dev
 
 ### Recipe details page
 
-![](./screenshots/screenshotRecipeDetails.png)
+![](./screenshots/ScreenshotRecipeDetails.png)
