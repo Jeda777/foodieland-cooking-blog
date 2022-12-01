@@ -19,7 +19,7 @@ Cooking blog and recipe site that stores users, posts, and recipes on a database
     - [/blog]()
         - [/63753427f2a719d3998759c3]() -->
   - [/recipes](https://hilarious-puppy-107ba1.netlify.app/recipes)
-    - [not ready]()
+    - [/recipes/[id]](https://hilarious-puppy-107ba1.netlify.app/recipes/6373f9f4061fefa272437741) (Only recipe with details)
   - [not ready]()
     - [not ready]()
   - api
@@ -54,3 +54,7 @@ npm run dev
 ### Recipes page
 
 ![](./screenshots/screenshotRecipes.png)
+
+### Recipe details page
+
+![](./screenshots/screenshotRecipeDetails.png)
