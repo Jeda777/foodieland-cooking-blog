@@ -12,7 +12,7 @@ type RecipeExpand = {
   description: string
   ingredientsCategories: string[]
   ingredients: string[][]
-  directions: string[][] | number[][]
+  directions: string[][]
   date: string
 } | null
 

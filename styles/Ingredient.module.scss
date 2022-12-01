@@ -1,0 +1,20 @@
+.ingredient {
+  @apply flex gap-6 border-b border-solid border-b-black border-opacity-20 py-4 lg:py-8;
+  div {
+    @apply flex h-6 w-6 items-center justify-center rounded-full border border-solid border-black border-opacity-20;
+    img {
+      @apply mt-0.5 h-[60%] w-[60%];
+    }
+  }
+  button {
+    @apply leading-[1.22em] tracking-[-0.02em] lg:text-lg lg:leading-[1.22em];
+  }
+  &.active {
+    div {
+      @apply bg-black;
+    }
+    button {
+      @apply line-through opacity-60 lg:text-base lg:leading-6;
+    }
+  }
+}

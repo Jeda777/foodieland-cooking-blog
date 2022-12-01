@@ -6,8 +6,11 @@ import Inbox from '../../components/Inbox'
 import YouMayLikeTheseRecipesToo from '../../components/YouMayLikeTheseRecipesToo'
 import style from '../../styles/RecipeDetails.module.scss'
 import Image from 'next/image'
-import { timer, forkKnife, printer, share } from '../../assets/index'
+import { timer, forkKnife, printer, share, ads } from '../../assets/index'
 import moment from 'moment'
+import Ingredient from '../../components/Ingredient'
+import Direction from '../../components/Direction'
+import SmallRecipeCard from '../../components/SmallRecipeCard'
 
 type Props = {
   recipe: Recipe
@@ -92,6 +95,35 @@ const id: React.FC<Props> = ({ recipe, user, recipesData }) => {
           aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
           cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
+
+        <div className={style['details-container']}>
+          <div className={style.ingredients}>
+            <h2>Ingredients</h2>
+            {recipe.expand.ingredientsCategories.map((i, index) => (
+              <div key={index}>
+                <h3>{i}</h3>
+                <ul>
+                  {recipe.expand?.ingredients[index].map((i2, index2) => (
+                    <Ingredient key={index2} text={i2} />
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className={style.directions}>
+            <h2>Directions</h2>
+            <ul>
+              {recipe.expand.directions.map((i, index) => (
+                <Direction key={index} direction={i} number={index} />
+              ))}
+            </ul>
+          </div>
+          <aside>
+            <h2>Other Recipe</h2>
+            {recipesData.map((i, index) => (index < 3 ? <SmallRecipeCard recipe={i} /> : null))}
+            <Image className={style.ad} src={ads} alt='ad' />
+          </aside>
+        </div>
       </section>
       <Inbox />
       <YouMayLikeTheseRecipesToo recipesData={recipesData} />

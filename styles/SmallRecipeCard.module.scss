@@ -1,0 +1,9 @@
+.small-recipe-card {
+  @apply flex items-center gap-6;
+  img {
+    @apply w-44 rounded-2xl;
+  }
+  p {
+    @apply font-semibold leading-[1.4em] tracking-[-0.04em] lg:text-xl lg:leading-[1.4em];
+  }
+}

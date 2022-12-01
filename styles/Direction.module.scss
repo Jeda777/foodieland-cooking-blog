@@ -1,0 +1,29 @@
+.direction {
+  @apply flex gap-6 border-b border-solid border-b-black border-opacity-20 py-8 lg:py-12;
+  .done {
+    @apply flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-solid border-black border-opacity-20;
+    img {
+      @apply mt-0.5 h-[60%] w-[60%];
+    }
+  }
+  button {
+    @apply text-left;
+    h3 {
+      @apply mb-2 text-lg font-semibold leading-[1.21em] tracking-[-0.02em] lg:text-2xl lg:leading-[1.21em];
+    }
+    p {
+      @apply py-2 text-xs leading-[1.625em] tracking-[-0.02em] opacity-60 lg:text-base lg:leading-[1.625em];
+    }
+    img {
+      @apply w-full;
+    }
+  }
+  &.active {
+    .done {
+      @apply bg-black;
+    }
+    button {
+      @apply line-through opacity-60;
+    }
+  }
+}

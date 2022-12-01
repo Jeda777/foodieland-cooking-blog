@@ -26,6 +26,7 @@ import twitter from './twitter.svg'
 import vegan from './vegan-min.png'
 import printer from './printer.svg'
 import share from './share.svg'
+import done from './done.svg'
 
 const categories = [
   { name: 'breakfast', img: breakfast },
@@ -65,4 +66,5 @@ export {
   categories,
   printer,
   share,
+  done,
 }
