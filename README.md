@@ -15,7 +15,6 @@ Cooking blog and recipe site that stores users, posts, and recipes on a database
 
 - [home](https://hilarious-puppy-107ba1.netlify.app)
     <!--
-        - [/6373f9f4061fefa272437741]()
     - [/blog]()
         - [/63753427f2a719d3998759c3]() -->
   - [/recipes](https://hilarious-puppy-107ba1.netlify.app/recipes)
