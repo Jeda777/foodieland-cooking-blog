@@ -4,6 +4,7 @@ import { timer, forkKnife } from '../assets/index'
 import Image from 'next/image'
 import Heart from './Heart'
 import { useState } from 'react'
+import Link from 'next/link'
 
 type Props = {
   type: number
@@ -19,7 +20,7 @@ const RecipeCard: React.FC<Props> = ({ type, data, index }) => {
         <Image unoptimized src={data.images.main} width='1' height='1' alt={data.name} />
         <Heart type={type} liked={liked} setLiked={setLiked} />
       </div>
-      <a href={`/recipes/${data._id}`} className={style['text-container']}>
+      <Link href={`/recipes/${data._id}`} className={style['text-container']}>
         <h6>{data.name}</h6>
         <div>
           <div>
@@ -31,7 +32,7 @@ const RecipeCard: React.FC<Props> = ({ type, data, index }) => {
             <p>{data.dish}</p>
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   )
 }

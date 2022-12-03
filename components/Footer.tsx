@@ -2,6 +2,7 @@ import style from '../styles/Footer.module.scss'
 import { logo, facebook, twitter } from '../assets'
 import Image from 'next/image'
 import InstagramIcon from './InstagramIcon'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -12,10 +13,10 @@ const Footer = () => {
           <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, </p>
         </div>
         <div className={style.nav}>
-          <a href='#'>Recipes</a>
-          <a href='#'>Blog</a>
-          <a href='#'>Contact</a>
-          <a href='#'>About us</a>
+          <Link href='/recipes'>Recipes</Link>
+          <Link href='/blog'>Blog</Link>
+          <Link href='#'>Contact</Link>
+          <Link href='#'>About us</Link>
         </div>
       </div>
       <div className={style.lower}>

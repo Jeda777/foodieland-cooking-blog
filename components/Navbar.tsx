@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { logo, facebook, twitter, close, menu } from '../assets/index'
 import InstagramIcon from './InstagramIcon'
+import Link from 'next/link'
 
 const Navbar = () => {
   const [opened, setOpened] = useState(false)
@@ -15,11 +16,11 @@ const Navbar = () => {
       <Image src={logo} alt='foodieland.' />
       <nav className={`${opened ? style.active : ''} ${style['mobile-nav']}`}>
         <div>
-          <a href='/'>Home</a>
-          <a href='/recipes'>Recipes</a>
-          <a href='#'>Blog</a>
-          <a href='#'>Contact</a>
-          <a href='#'>About us</a>
+          <Link href='/'>Home</Link>
+          <Link href='/recipes'>Recipes</Link>
+          <Link href='/blog'>Blog</Link>
+          <Link href='#'>Contact</Link>
+          <Link href='#'>About us</Link>
         </div>
         <div>
           <a>
@@ -34,11 +35,11 @@ const Navbar = () => {
         </div>
       </nav>
       <div className={style['desktop-nav']}>
-        <a href='/'>Home</a>
-        <a href='/recipes'>Recipes</a>
-        <a href='#'>Blog</a>
-        <a href='#'>Contact</a>
-        <a href='#'>About us</a>
+        <Link href='/'>Home</Link>
+        <Link href='/recipes'>Recipes</Link>
+        <Link href='/blog'>Blog</Link>
+        <Link href='#'>Contact</Link>
+        <Link href='#'>About us</Link>
       </div>
       <div className={style['desktop-social']}>
         <a>
