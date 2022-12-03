@@ -1,21 +1,32 @@
 import Head from 'next/head'
 import Inbox from '../../components/Inbox'
-import clientPromise from '../../database/mongodb'
 import style from '../../styles/Recipes.module.scss'
 import { Recipe } from '../../mongodb'
 import RecipeCard from '../../components/RecipeCard'
-import { GetServerSideProps } from 'next'
 import Pagination from '../../components/Pagination'
+import { useRouter } from 'next/router'
+import { useEffect, useState, useRef } from 'react'
 
-type Props = {
-  recipesData: Recipe[]
-  count: number
-  page: string | string[]
-}
+const recipes = () => {
+  const router = useRouter()
+  const { page } = router.query
 
-const recipes: React.FC<Props> = ({ recipesData, count, page }) => {
-  const pageCount = Math.floor(count / 9) + 1
-  const pageNumber = Number(page)
+  const count = useRef(1)
+  const [recipesData, setRecipesData] = useState<null | Recipe[]>(null)
+
+  const fetchRecipes = async () => {
+    const data = await fetch(`/api/recipes?page=${page || 1}`).then((res) => res.json())
+
+    count.current = data.count
+    setRecipesData(data.recipes)
+  }
+
+  useEffect(() => {
+    fetchRecipes()
+  }, [page])
+
+  const pageCount = Math.floor(count.current / 9) + 1
+  const pageNumber = Number(page || 1)
   return (
     <>
       <Head>
@@ -30,9 +41,11 @@ const recipes: React.FC<Props> = ({ recipesData, count, page }) => {
       </header>
 
       <section id={style.recipes}>
-        {recipesData.map((i: Recipe, index) => {
-          return <RecipeCard key={i._id} data={i} type={3} index={index} />
-        })}
+        {recipesData !== null
+          ? recipesData.map((i: Recipe, index) => {
+              return <RecipeCard key={i._id} data={i} type={3} index={index} />
+            })
+          : 'loading'}
       </section>
 
       <Pagination count={pageCount} page={pageNumber} />
@@ -40,27 +53,6 @@ const recipes: React.FC<Props> = ({ recipesData, count, page }) => {
       <Inbox />
     </>
   )
-}
-
-export const getServerSideProps: GetServerSideProps<{ recipesData: Recipe[]; count: number; page: string | string[] }> = async (
-  context,
-) => {
-  let { page } = context.query
-  if (page === undefined) page = '1'
-  const client = await clientPromise
-  const count = await client.db('Data').collection('recipes').countDocuments()
-  const lt = count + 1 - (Number(page) - 1) * 9
-  const gt = lt - 10
-  const data = await client
-    .db('Data')
-    .collection('recipes')
-    .find({ id: { $gt: gt, $lt: lt } })
-    .sort({ id: -1 })
-    .toArray()
-  const recipes: Recipe[] = JSON.parse(JSON.stringify(data))
-  return {
-    props: { recipesData: recipes, count: count, page: page },
-  }
 }
 
 export default recipes
