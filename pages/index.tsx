@@ -161,7 +161,11 @@ const Home: React.FC<Props> = ({ recipesData }) => {
 
 export async function getStaticProps() {
   const client = await clientPromise
-  const data = await client.db('Data').collection('recipes').find().toArray()
+  const data = await client
+    .db('Data')
+    .collection('recipes')
+    .find({ id: { $lt: 17 } })
+    .toArray()
   const recipes: Recipe[] = JSON.parse(JSON.stringify(data))
   return {
     props: { recipesData: recipes },
