@@ -11,6 +11,7 @@ import moment from 'moment'
 import Ingredient from '../../components/Ingredient'
 import Direction from '../../components/Direction'
 import SmallRecipeCard from '../../components/SmallRecipeCard'
+import Head from 'next/head'
 
 type Props = {
   recipe: Recipe
@@ -23,6 +24,11 @@ const id: React.FC<Props> = ({ recipe, user, recipesData }) => {
   const nutritions = ['Calories', 'Total Fat', 'Protein', 'CarboHydrate', 'Cholesterol']
   return (
     <>
+      <Head>
+        <title>{recipe.name} - Foodieland.</title>
+        <meta name='description' content='Foodieland. cooking blog and recipes app recipes page' />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
       <section id={style['recipe-details']}>
         <header>
           <div className={style.left}>
