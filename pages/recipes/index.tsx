@@ -41,11 +41,13 @@ const recipes = () => {
       </header>
 
       <section id={style.recipes}>
-        {recipesData !== null
-          ? recipesData.map((i: Recipe, index) => {
-              return <RecipeCard key={i._id} data={i} type={3} index={index} />
-            })
-          : 'loading'}
+        {recipesData !== null ? (
+          recipesData.map((i: Recipe, index) => {
+            return <RecipeCard key={i._id} data={i} type={3} index={index} />
+          })
+        ) : (
+          <div className='lg:col-span-3'>Loading...</div>
+        )}
       </section>
 
       <Pagination count={pageCount} page={pageNumber} />
