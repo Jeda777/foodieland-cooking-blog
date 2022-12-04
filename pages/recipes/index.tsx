@@ -13,12 +13,28 @@ const recipes = () => {
 
   const count = useRef(1)
   const [recipesData, setRecipesData] = useState<null | Recipe[]>(null)
+  const [imgData, setImgData] = useState<{ id: number; images: { main: string } }[] | null>(null)
 
   const fetchRecipes = async () => {
-    const data = await fetch(`/api/recipes?page=${page || 1}`).then((res) => res.json())
-
-    count.current = data.count
-    setRecipesData(data.recipes)
+    const recipesDataNoImg = await fetch(`/api/recipes?page=${page || 1}&img=0`).then((res) => res.json())
+    count.current = recipesDataNoImg.count
+    const recipesNoImg: Recipe[] = []
+    recipesDataNoImg.recipes.forEach((i: Recipe) => {
+      recipesNoImg.push({
+        _id: i._id,
+        id: i.id,
+        name: i.name,
+        time: i.time,
+        dish: i.dish,
+        expand: null,
+        images: {
+          main: '',
+        },
+      })
+    })
+    setRecipesData(recipesNoImg)
+    const imgData = await fetch(`/api/recipes?page=${page || 1}&img=1`).then((res) => res.json())
+    setImgData(imgData.recipes)
   }
 
   useEffect(() => {
@@ -43,7 +59,9 @@ const recipes = () => {
       <section id={style.recipes}>
         {recipesData !== null
           ? recipesData.map((i: Recipe, index) => {
-              return <RecipeCard key={i._id} data={i} type={3} index={index} />
+              let data = i
+              if (imgData !== null) data.images = imgData[index].images
+              return <RecipeCard key={i._id} data={data} type={3} index={index} />
             })
           : 'loading'}
       </section>
