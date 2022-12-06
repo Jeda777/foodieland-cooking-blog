@@ -1,0 +1,30 @@
+.post {
+  @apply flex grid-cols-3 flex-col gap-4 md:flex-row;
+  img {
+    @apply w-full rounded-2xl object-cover md:w-[290px];
+  }
+  .post-info {
+    @apply flex flex-col justify-between gap-2 md:gap-4 md:py-3;
+    h3 {
+      @apply text-lg font-semibold leading-[1.21em] tracking-[-0.04em] lg:text-2xl lg:leading-[1.21em];
+    }
+    .description {
+      @apply text-sm leading-[1.75em] opacity-60 lg:text-base lg:leading-[1.75em];
+    }
+    .author-info {
+      @apply flex items-center gap-6;
+      div {
+        @apply flex items-center gap-4 border-r border-solid border-black border-opacity-50 pr-6;
+        img {
+          @apply h-10 w-10 rounded-full;
+        }
+        p {
+          @apply text-base font-bold leading-[1.1875em] opacity-100;
+        }
+      }
+      p {
+        @apply text-sm font-medium leading-[1.21em] tracking-[-0.02em] opacity-60;
+      }
+    }
+  }
+}
