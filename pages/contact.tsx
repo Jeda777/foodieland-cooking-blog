@@ -5,6 +5,7 @@ import { Recipe } from '../mongodb'
 import style from '../styles/Contact.module.scss'
 import { chef, arrowDown } from '../assets/index'
 import Image from 'next/image'
+import Head from 'next/head'
 
 type Props = {
   recipesData: Recipe[]
@@ -13,6 +14,11 @@ type Props = {
 const Contact: React.FC<Props> = ({ recipesData }) => {
   return (
     <>
+      <Head>
+        <title>Contact - Foodieland.</title>
+        <meta name='description' content='Foodieland. cooking blog and recipes app recipes page' />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
       <section id={style.contact}>
         <h2>Contact us</h2>
         <div className={style.container}>
