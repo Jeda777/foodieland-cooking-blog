@@ -19,7 +19,7 @@ const Navbar = () => {
           <Link href='/'>Home</Link>
           <Link href='/recipes'>Recipes</Link>
           <Link href='/blog'>Blog</Link>
-          <Link href='#'>Contact</Link>
+          <Link href='/contact'>Contact</Link>
           <Link href='#'>About us</Link>
         </div>
         <div>
@@ -38,7 +38,7 @@ const Navbar = () => {
         <Link href='/'>Home</Link>
         <Link href='/recipes'>Recipes</Link>
         <Link href='/blog'>Blog</Link>
-        <Link href='#'>Contact</Link>
+        <Link href='/contact'>Contact</Link>
         <Link href='#'>About us</Link>
       </div>
       <div className={style['desktop-social']}>

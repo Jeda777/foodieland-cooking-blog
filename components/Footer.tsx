@@ -15,7 +15,7 @@ const Footer = () => {
         <div className={style.nav}>
           <Link href='/recipes'>Recipes</Link>
           <Link href='/blog'>Blog</Link>
-          <Link href='#'>Contact</Link>
+          <Link href='/contact'>Contact</Link>
           <Link href='#'>About us</Link>
         </div>
       </div>
