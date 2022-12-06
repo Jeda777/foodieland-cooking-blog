@@ -35,19 +35,21 @@ const recipes = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <header id={style.header}>
-        <h1>Recipes</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-      </header>
-
       <section id={style.recipes}>
-        {recipesData !== null ? (
-          recipesData.map((i: Recipe, index) => {
-            return <RecipeCard key={i._id} data={i} type={3} index={index} />
-          })
-        ) : (
-          <div className='lg:col-span-3'>Loading...</div>
-        )}
+        <header id={style.header}>
+          <h1>Recipes</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+        </header>
+
+        <div id={style['recipes-container']}>
+          {recipesData !== null ? (
+            recipesData.map((i: Recipe, index) => {
+              return <RecipeCard key={i._id} data={i} type={3} index={index} />
+            })
+          ) : (
+            <div className='lg:col-span-3'>Loading...</div>
+          )}
+        </div>
       </section>
 
       <Pagination count={pageCount} page={pageNumber} />
