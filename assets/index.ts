@@ -28,6 +28,7 @@ import printer from './printer.svg'
 import share from './share.svg'
 import done from './done.svg'
 import chef from './Chef.png'
+import arrowDown from './arrowDown.svg'
 
 const categories = [
   { name: 'breakfast', img: breakfast },
@@ -69,4 +70,5 @@ export {
   share,
   done,
   chef,
+  arrowDown,
 }

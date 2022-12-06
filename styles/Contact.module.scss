@@ -1,0 +1,39 @@
+#contact {
+  @apply mt-10 flex w-[90%] max-w-screen-xl flex-col items-center gap-16;
+  .container {
+    @apply flex w-full flex-col items-center gap-8 lg:flex-row lg:items-start;
+    .image-container {
+      @apply flex w-full max-w-[300px] justify-center rounded-2xl bg-gradient-to-t from-brightBlue to-transparent lg:max-w-[350px]
+      xl:max-w-[400px];
+      img {
+        @apply w-[90%];
+      }
+    }
+    form {
+      @apply flex w-full grid-cols-2 flex-col gap-4 md:grid md:gap-6;
+      .form-group {
+        @apply flex w-full flex-col gap-3;
+        label {
+          @apply text-xs font-normal uppercase leading-[1.666em] tracking-[0.08em] opacity-60;
+        }
+        input,
+        textarea,
+        select {
+          @apply rounded-2xl border border-solid border-black border-opacity-50 py-4 px-5 text-sm leading-[1.7em] tracking-[-0.02em]
+          opacity-60;
+        }
+        select {
+          @apply appearance-none bg-no-repeat;
+          background-position-y: 50%;
+          background-position-x: 95%;
+        }
+        &.textfield {
+          @apply col-span-2;
+        }
+      }
+      button {
+        @apply mt-4 rounded-2xl bg-black p-5 font-semibold leading-[1.75em] tracking-[-0.02em] text-white md:w-1/2;
+      }
+    }
+  }
+}
