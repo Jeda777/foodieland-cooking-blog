@@ -27,6 +27,7 @@ import vegan from './vegan-min.png'
 import printer from './printer.svg'
 import share from './share.svg'
 import done from './done.svg'
+import chef from './Chef.png'
 
 const categories = [
   { name: 'breakfast', img: breakfast },
@@ -67,4 +68,5 @@ export {
   printer,
   share,
   done,
+  chef,
 }
