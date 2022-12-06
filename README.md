@@ -20,6 +20,7 @@ Cooking blog and recipe site that stores users, posts, and recipes on a database
     - [/recipes/[id]](https://hilarious-puppy-107ba1.netlify.app/recipes/6373f9f4061fefa272437741) (Only recipe with details)
   - [/blog](https://hilarious-puppy-107ba1.netlify.app/blog)
     - [not ready]()
+  - [/contact](https://hilarious-puppy-107ba1.netlify.app/contact)
   - api
     - [/recipes](https://hilarious-puppy-107ba1.netlify.app/api/recipes)
       - [/[id]](https://hilarious-puppy-107ba1.netlify.app/api/recipes/6373f9f4061fefa272437741)
