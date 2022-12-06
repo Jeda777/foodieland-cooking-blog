@@ -48,4 +48,7 @@ type BlogPost = {
   authorID: string
   date: string
   expand: BlogPostExpand
+  images: {
+    main: string
+  }
 }
