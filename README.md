@@ -57,3 +57,15 @@ npm run dev
 ### Recipe details page
 
 ![](./screenshots/ScreenshotRecipeDetails.png)
+
+### Blog page
+
+![](./screenshots/screenshotBlog.png)
+
+<!-- ### Article page
+
+![](./screenshots/screenshotArticle.png) -->
+
+### Contact page
+
+![](./screenshots/screenshotContact.png)
