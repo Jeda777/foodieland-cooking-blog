@@ -1,0 +1,9 @@
+#header {
+  @apply flex w-[90%] max-w-screen-xl flex-col items-center gap-6 text-center;
+  h1 {
+    @apply text-4xl font-semibold leading-[1.2em] tracking-[-0.04em] md:text-5xl md:leading-[1.2em] 2xl:text-[4rem] 2xl:leading-[1.2em];
+  }
+  p {
+    @apply leading-[1.75em] opacity-60;
+  }
+}
