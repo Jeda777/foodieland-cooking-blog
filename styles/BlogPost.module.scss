@@ -1,0 +1,28 @@
+#post {
+  @apply mt-10 flex w-[90%] max-w-screen-xl flex-col items-center gap-16;
+  header {
+    @apply flex flex-col items-center gap-8 text-center;
+    h1 {
+      @apply text-center text-3xl font-semibold leading-[1.21em] tracking-[-0.04em] md:text-4xl md:leading-[1.21em] lg:text-left
+            lg:text-5xl lg:leading-[1.21em] xl:text-[4rem] xl:leading-[1.21em];
+    }
+    .user-info {
+      @apply flex flex-wrap items-center justify-center gap-6;
+      div {
+        @apply flex items-center gap-4 border-solid border-black border-opacity-20 md:border-r md:pr-16;
+        img {
+          @apply h-12 w-12 rounded-full;
+        }
+        p {
+          @apply text-sm font-bold leading-[1.19em] tracking-[-0.02em] lg:text-base lg:leading-[1.19em];
+        }
+      }
+      .date {
+        @apply text-xs font-normal leading-[1.21em] tracking-[-0.02em] opacity-60 lg:text-sm lg:leading-[1.21em];
+      }
+    }
+    .description {
+      @apply text-sm leading-[1.75em] opacity-60 lg:text-base lg:leading-[1.75em];
+    }
+  }
+}

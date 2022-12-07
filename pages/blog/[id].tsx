@@ -7,6 +7,7 @@ import clientPromise from '../../database/mongodb'
 import Image from 'next/image'
 import Head from 'next/head'
 import style from '../../styles/BlogPost.module.scss'
+import moment from 'moment'
 
 type Props = {
   recipesData: Recipe[]
@@ -22,6 +23,24 @@ const id: React.FC<Props> = ({ recipesData, post, user }) => {
         <meta name='description' content='Foodieland. cooking blog and recipes app recipes page' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
+
+      <section id={style.post}>
+        <header>
+          <h1>{post.name}</h1>
+          <div className={style['user-info']}>
+            <div>
+              <Image alt='user photo' unoptimized width='1' height='1' src={user.images.main} />
+              <p>
+                {user.name} {user.surname}
+              </p>
+            </div>
+
+            <p className={style.date}>{moment(post.date).format('D MMMM YYYY')}</p>
+          </div>
+          <p className={style.description}>{post.description}</p>
+        </header>
+      </section>
+
       <Inbox />
       <YouMayLikeTheseRecipesToo recipesData={recipesData} />
     </>
