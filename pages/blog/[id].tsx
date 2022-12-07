@@ -17,6 +17,11 @@ type Props = {
 const id: React.FC<Props> = ({ recipesData, post, user }) => {
   return (
     <>
+      <Head>
+        <title>{`${post.name} - Foodieland.`}</title>
+        <meta name='description' content='Foodieland. cooking blog and recipes app recipes page' />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
       <Inbox />
       <YouMayLikeTheseRecipesToo recipesData={recipesData} />
     </>
