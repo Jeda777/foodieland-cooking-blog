@@ -25,7 +25,7 @@ const id: React.FC<Props> = ({ recipe, user, recipesData }) => {
   return (
     <>
       <Head>
-        <title>{recipe.name} - Foodieland.</title>
+        <title>{`${recipe.name} - Foodieland.`}</title>
         <meta name='description' content='Foodieland. cooking blog and recipes app recipes page' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
@@ -126,7 +126,7 @@ const id: React.FC<Props> = ({ recipe, user, recipesData }) => {
           </div>
           <aside>
             <h2>Other Recipe</h2>
-            {recipesData.map((i, index) => (index < 3 ? <SmallRecipeCard recipe={i} /> : null))}
+            {recipesData.map((i, index) => (index < 3 ? <SmallRecipeCard key={index} recipe={i} /> : null))}
             <Image className={style.ad} src={ads} alt='ad' />
           </aside>
         </div>
@@ -137,7 +137,7 @@ const id: React.FC<Props> = ({ recipe, user, recipesData }) => {
   )
 }
 
-export const getServerSideProps: GetServerSideProps<{ recipe: Recipe }> = async (context) => {
+export const getServerSideProps: GetServerSideProps<{}> = async (context) => {
   const id = context.params?.id
   if (typeof id === 'string' && ObjectId.isValid(id)) {
     const client = await clientPromise

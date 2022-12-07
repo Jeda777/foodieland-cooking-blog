@@ -13,9 +13,9 @@ const YouMayLikeTheseRecipesToo: React.FC<Props> = ({ recipesData }) => {
       <div className={style['recipes-container']}>
         {recipesData !== undefined
           ? recipesData.map((i: Recipe, index) => {
-              return <RecipeCard type={2} data={i} index={index} />
+              return <RecipeCard key={index} type={2} data={i} index={index} />
             })
-          : ''}
+          : null}
       </div>
     </section>
   )

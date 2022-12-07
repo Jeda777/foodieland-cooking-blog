@@ -21,9 +21,9 @@ const Direction: React.FC<Props> = ({ direction, number }) => {
         </h3>
         {direction.map((i, index) =>
           index === 0 ? null : i.startsWith('data:image/png;base64') ? (
-            <Image src={i} alt='' unoptimized width='1' height='1' />
+            <Image key={index} src={i} alt='' unoptimized width='1' height='1' />
           ) : (
-            <p>{i}</p>
+            <p key={index}>{i}</p>
           ),
         )}
       </button>
