@@ -1,7 +1,7 @@
 import style from '../styles/Footer.module.scss'
 import { logo, facebook, twitter } from '../assets'
 import Image from 'next/image'
-import InstagramIcon from './InstagramIcon'
+import { InstagramIcon } from './index'
 import Link from 'next/link'
 
 const Footer = () => {

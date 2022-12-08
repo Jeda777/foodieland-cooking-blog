@@ -1,12 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Inbox from '../../components/Inbox'
+import { Inbox, SmallRecipeCard, PostCard } from '../../components/index'
 import style from '../../styles/Blog.module.scss'
 import { BlogPost, User, Recipe } from '../../mongodb'
 import { ads } from '../../assets/index'
 import clientPromise from '../../database/mongodb'
-import SmallRecipeCard from '../../components/SmallRecipeCard'
-import PostCard from '../../components/PostCard'
 
 type Props = {
   recipesData: Recipe[]

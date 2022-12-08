@@ -1,9 +1,7 @@
 import Head from 'next/head'
-import Inbox from '../../components/Inbox'
+import { Inbox, RecipeCard, Pagination } from '../../components/index'
 import style from '../../styles/Recipes.module.scss'
 import { Recipe } from '../../mongodb'
-import RecipeCard from '../../components/RecipeCard'
-import Pagination from '../../components/Pagination'
 import { useRouter } from 'next/router'
 import { useEffect, useState, useRef } from 'react'
 

@@ -2,7 +2,7 @@ import style from '../styles/Navbar.module.scss'
 import Image from 'next/image'
 import { useState } from 'react'
 import { logo, facebook, twitter, close, menu } from '../assets/index'
-import InstagramIcon from './InstagramIcon'
+import { InstagramIcon } from './index'
 import Link from 'next/link'
 
 const Navbar = () => {

@@ -14,12 +14,9 @@ import {
   everyoneCanBeAChefInTheirOwnKitchen,
   posts,
 } from '../assets'
-import Category from '../components/Category'
+import { Category, RecipeCard, InstagramIcon, Inbox } from '../components/index'
 import { Recipe } from '../mongodb'
-import RecipeCard from '../components/RecipeCard'
-import InstagramIcon from '../components/InstagramIcon'
 import clientPromise from '../database/mongodb'
-import Inbox from '../components/Inbox'
 
 type Props = {
   recipesData: Recipe[]

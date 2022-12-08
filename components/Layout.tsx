@@ -1,5 +1,4 @@
-import Footer from './Footer'
-import Navbar from './Navbar'
+import { Navbar, Footer } from './index'
 
 type LayoutProps = {
   children: React.ReactNode

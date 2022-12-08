@@ -2,7 +2,7 @@ import { Recipe } from '../mongodb'
 import style from '../styles/RecipeCard.module.scss'
 import { timer, forkKnife } from '../assets/index'
 import Image from 'next/image'
-import Heart from './Heart'
+import { Heart } from './index'
 import { useState } from 'react'
 import Link from 'next/link'
 

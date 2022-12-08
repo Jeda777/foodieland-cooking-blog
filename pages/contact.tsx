@@ -1,5 +1,4 @@
-import Inbox from '../components/Inbox'
-import YouMayLikeTheseRecipesToo from '../components/YouMayLikeTheseRecipesToo'
+import { Inbox, YouMayLikeTheseRecipesToo } from '../components/index'
 import clientPromise from '../database/mongodb'
 import { Recipe } from '../mongodb'
 import style from '../styles/Contact.module.scss'
