@@ -38,6 +38,9 @@ type User = {
 }
 
 type BlogPostExpand = {
+  images: {
+    main: string
+  }
   parts: string[][]
 } | null
 

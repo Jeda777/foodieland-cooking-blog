@@ -25,4 +25,7 @@
       @apply text-sm leading-[1.75em] opacity-60 lg:text-base lg:leading-[1.75em];
     }
   }
+  #hero-img {
+    @apply aspect-[1280/600] w-full rounded-3xl object-cover lg:rounded-[30px];
+  }
 }

@@ -16,6 +16,7 @@ type Props = {
 }
 
 const id: React.FC<Props> = ({ recipesData, post, user }) => {
+  if (post.expand === null) throw new Error('Post dont have details')
   return (
     <>
       <Head>
@@ -34,11 +35,12 @@ const id: React.FC<Props> = ({ recipesData, post, user }) => {
                 {user.name} {user.surname}
               </p>
             </div>
-
             <p className={style.date}>{moment(post.date).format('D MMMM YYYY')}</p>
           </div>
           <p className={style.description}>{post.description}</p>
         </header>
+
+        <Image id={style['hero-img']} src={post.expand.images.main} alt='' unoptimized width='1' height='1' />
       </section>
 
       <Inbox />
