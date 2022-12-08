@@ -10,7 +10,7 @@ type Props = {
 const SmallRecipeCard: React.FC<Props> = ({ recipe }) => {
   return (
     <Link href={`/recipes/${recipe._id}`} className={style['small-recipe-card']}>
-      <Image unoptimized src={recipe.images.main} width='1' height='1' alt={recipe.name} />
+      <Image src={recipe.images.main} width='1' height='1' alt={recipe.name} />
       <p>{recipe.name}</p>
     </Link>
   )

@@ -31,7 +31,7 @@ const id: React.FC<Props> = ({ recipesData, post, user }) => {
           <h1>{post.name}</h1>
           <div className={style['user-info']}>
             <div>
-              <Image alt='user photo' unoptimized width='1' height='1' src={user.images.main} />
+              <Image alt='user photo' width='1' height='1' src={user.images.main} />
               <p>
                 {user.name} {user.surname}
               </p>
@@ -41,7 +41,7 @@ const id: React.FC<Props> = ({ recipesData, post, user }) => {
           <p className={style.description}>{post.description}</p>
         </header>
 
-        <Image id={style['hero-img']} src={post.expand.images.main} alt='' unoptimized width='1' height='1' />
+        <Image id={style['hero-img']} src={post.expand.images.main} alt='' width='1' height='1' />
 
         <div id={style.details}>
           <div id={style['details-post']}>
@@ -51,7 +51,7 @@ const id: React.FC<Props> = ({ recipesData, post, user }) => {
                   index2 === 0 ? (
                     <h2 className={style['post-section-heading']}>{i[0]}</h2>
                   ) : i2.startsWith('data:image/png;base64') ? (
-                    <Image className={style['post-section-img']} key={index2} src={i2} alt='' unoptimized width='1' height='1' />
+                    <Image className={style['post-section-img']} key={index2} src={i2} alt='' width='1' height='1' />
                   ) : i2.startsWith('“') && i2.endsWith('”') ? (
                     <p className={style['post-section-quote']}>{i2}</p>
                   ) : (

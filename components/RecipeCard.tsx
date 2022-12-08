@@ -17,7 +17,7 @@ const RecipeCard: React.FC<Props> = ({ type, data, index }) => {
   return (
     <div className={`${style['recipe-card']} ${type == 1 ? style[`o-${index}`] : ''}`} data-type={type}>
       <div className={style['img-container']}>
-        <Image unoptimized src={data.images.main} width='1' height='1' alt={data.name} />
+        <Image src={data.images.main} width='1' height='1' alt={data.name} />
         <Heart type={type} liked={liked} setLiked={setLiked} />
       </div>
       <Link href={`/recipes/${data._id}`} className={style['text-container']}>

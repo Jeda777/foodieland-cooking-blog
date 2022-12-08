@@ -37,7 +37,7 @@ const index: React.FC<Props> = ({ recipesData, users, posts }) => {
           </div>
           <aside>
             <h2>Other Recipe</h2>
-            {recipesData.map((i, index) => (index < 3 ? <SmallRecipeCard recipe={i} /> : null))}
+            {recipesData.map((i, index) => (index < 3 ? <SmallRecipeCard key={index} recipe={i} /> : null))}
             <Image className={style.ad} src={ads} alt='ad' />
           </aside>
         </div>

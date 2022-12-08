@@ -35,7 +35,7 @@ const id: React.FC<Props> = ({ recipe, user, recipesData }) => {
             <h1>{recipe.name}</h1>
             <div className={style['additional-info']}>
               <div className={style['user-info']}>
-                <Image alt='user photo' unoptimized width='1' height='1' src={user.images.main} />
+                <Image alt='user photo' width='1' height='1' src={user.images.main} />
                 <div>
                   <p>John Smith</p>
                   <p>{moment(recipe.expand.date).format('D MMMM YYYY')}</p>
@@ -79,7 +79,7 @@ const id: React.FC<Props> = ({ recipe, user, recipesData }) => {
 
         <div className={style['main-info']}>
           <div className={style['img-container']}>
-            <Image alt={recipe.name} src={recipe.images.main} unoptimized width='1' height='1' />
+            <Image alt={recipe.name} src={recipe.images.main} width='1' height='1' />
           </div>
           <div className={style['info-container']}>
             <h3>Nutrition Information</h3>

@@ -12,14 +12,14 @@ type Props = {
 const PostCard: React.FC<Props> = ({ post, user }) => {
   return (
     <article className={style.post}>
-      <Image unoptimized src={post.images.main} width='1' height='1' alt={post.name} />
+      <Image src={post.images.main} width='1' height='1' alt={post.name} />
       <Link href={`/blog/${post._id}`} className={style['post-info']}>
         <h3>{post.name}</h3>
         <p className={style.description}>{post.description}</p>
         {user !== undefined ? (
           <div className={style['author-info']}>
             <div>
-              <Image unoptimized src={user.images.main} width='1' height='1' alt={post.name} />
+              <Image src={user.images.main} width='1' height='1' alt={post.name} />
               <p>
                 {user.name} {user.surname}
               </p>
