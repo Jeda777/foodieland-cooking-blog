@@ -1,4 +1,4 @@
-import { Inbox, YouMayLikeTheseRecipesToo } from '../../components/index'
+import { Inbox, YouMayLikeTheseRecipesToo, InstagramIcon } from '../../components/index'
 import { ObjectId } from 'mongodb'
 import { GetServerSideProps } from 'next'
 import { BlogPost, User, Recipe } from '../../mongodb'
@@ -7,7 +7,7 @@ import Image from 'next/image'
 import Head from 'next/head'
 import style from '../../styles/BlogPost.module.scss'
 import moment from 'moment'
-import { facebook, twitter, instagram } from '../../assets/index'
+import { facebook, twitter } from '../../assets/index'
 
 type Props = {
   recipesData: Recipe[]
@@ -76,7 +76,7 @@ const id: React.FC<Props> = ({ recipesData, post, user }) => {
                 <Image src={twitter} alt='twitter' />
               </a>
               <a>
-                <Image src={instagram} alt='instagram' />
+                <InstagramIcon />
               </a>
             </div>
           </div>
