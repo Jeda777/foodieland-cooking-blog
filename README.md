@@ -14,12 +14,10 @@ Cooking blog and recipe site that stores users, posts, and recipes on a database
 ## Links
 
 - [home](https://hilarious-puppy-107ba1.netlify.app)
-    <!--
-        - [/63753427f2a719d3998759c3]() -->
   - [/recipes](https://hilarious-puppy-107ba1.netlify.app/recipes)
     - [/recipes/[id]](https://hilarious-puppy-107ba1.netlify.app/recipes/6373f9f4061fefa272437741) (Only recipe with details)
   - [/blog](https://hilarious-puppy-107ba1.netlify.app/blog)
-    - [not ready]()
+    - [/blog/[id]](https://hilarious-puppy-107ba1.netlify.app/recipes/63753427f2a719d3998759c3) (Only post with details)
   - [/contact](https://hilarious-puppy-107ba1.netlify.app/contact)
   - api
     - [/recipes](https://hilarious-puppy-107ba1.netlify.app/api/recipes)
@@ -62,9 +60,9 @@ npm run dev
 
 ![](./screenshots/screenshotBlog.png)
 
-<!-- ### Article page
+### Post page
 
-![](./screenshots/screenshotArticle.png) -->
+![](./screenshots/screenshotPost.png)
 
 ### Contact page
 
