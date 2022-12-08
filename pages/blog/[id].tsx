@@ -49,13 +49,19 @@ const id: React.FC<Props> = ({ recipesData, post, user }) => {
               <div className={style['post-section']}>
                 {i.map((i2, index2) =>
                   index2 === 0 ? (
-                    <h2 className={style['post-section-heading']}>{i[0]}</h2>
+                    <h2 className={style['post-section-heading']} key={index2}>
+                      {i[0]}
+                    </h2>
                   ) : i2.startsWith('data:image/png;base64') ? (
                     <Image className={style['post-section-img']} key={index2} src={i2} alt='' width='1' height='1' />
                   ) : i2.startsWith('“') && i2.endsWith('”') ? (
-                    <p className={style['post-section-quote']}>{i2}</p>
+                    <p className={style['post-section-quote']} key={index2}>
+                      {i2}
+                    </p>
                   ) : (
-                    <p className={style['post-section-text']}>{i2}</p>
+                    <p className={style['post-section-text']} key={index2}>
+                      {i2}
+                    </p>
                   ),
                 )}
               </div>
