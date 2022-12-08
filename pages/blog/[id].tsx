@@ -89,7 +89,7 @@ const id: React.FC<Props> = ({ recipesData, post, user }) => {
   )
 }
 
-export const getServerSideProps: GetServerSideProps<{}> = async (context) => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   const id = context.params?.id
   if (typeof id === 'string' && ObjectId.isValid(id)) {
     const client = await clientPromise
