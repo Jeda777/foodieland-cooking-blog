@@ -8,6 +8,7 @@ import Image from 'next/image'
 import Head from 'next/head'
 import style from '../../styles/BlogPost.module.scss'
 import moment from 'moment'
+import { facebook, twitter, instagram } from '../../assets/index'
 
 type Props = {
   recipesData: Recipe[]
@@ -41,6 +42,40 @@ const id: React.FC<Props> = ({ recipesData, post, user }) => {
         </header>
 
         <Image id={style['hero-img']} src={post.expand.images.main} alt='' unoptimized width='1' height='1' />
+
+        <div id={style.details}>
+          <div id={style['details-post']}>
+            {post.expand.parts.map((i, index) => (
+              <div className={style['post-section']}>
+                {i.map((i2, index2) =>
+                  index2 === 0 ? (
+                    <h2 className={style['post-section-heading']}>{i[0]}</h2>
+                  ) : i2.startsWith('data:image/png;base64') ? (
+                    <Image className={style['post-section-img']} key={index2} src={i2} alt='' unoptimized width='1' height='1' />
+                  ) : i2.startsWith('“') && i2.endsWith('”') ? (
+                    <p className={style['post-section-quote']}>{i2}</p>
+                  ) : (
+                    <p className={style['post-section-text']}>{i2}</p>
+                  ),
+                )}
+              </div>
+            ))}
+          </div>
+          <div id={style['details-share']}>
+            <p>SHARE THIS ON:</p>
+            <div>
+              <a>
+                <Image src={facebook} alt='facebook' />
+              </a>
+              <a>
+                <Image src={twitter} alt='twitter' />
+              </a>
+              <a>
+                <Image src={instagram} alt='instagram' />
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
       <Inbox />

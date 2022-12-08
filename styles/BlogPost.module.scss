@@ -28,4 +28,39 @@
   #hero-img {
     @apply aspect-[1280/600] w-full rounded-3xl object-cover lg:rounded-[30px];
   }
+  #details {
+    @apply flex grid-cols-10 flex-col-reverse items-center gap-8 lg:grid lg:items-start;
+    #details-post {
+      @apply col-span-8 flex flex-col gap-10 md:gap-16 lg:px-10;
+      .post-section {
+        @apply flex flex-col gap-3 md:gap-6;
+        .post-section-heading {
+          @apply text-lg font-semibold leading-[1.21em] tracking-[-0.04em] lg:text-2xl lg:leading-[1.21em];
+        }
+        .post-section-img {
+          @apply w-full object-cover;
+        }
+        .post-section-quote {
+          @apply -mx-2 px-3 py-4 text-2xl font-medium leading-[1.78em] tracking-[-0.04em] lg:-mx-10 lg:px-10
+          lg:py-12 lg:text-4xl lg:leading-[1.78em];
+          background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
+        }
+        .post-section-text {
+          @apply rounded-xl leading-[1.75em] opacity-60 lg:rounded-2xl;
+        }
+      }
+    }
+    #details-share {
+      @apply col-span-2 flex flex-col items-center gap-8;
+      p {
+        @apply text-sm font-semibold leading-[1.21em] tracking-widest;
+      }
+      div {
+        @apply flex items-center gap-12 lg:flex-col;
+        a {
+          @apply cursor-pointer transition-all duration-300 hover:opacity-50;
+        }
+      }
+    }
+  }
 }

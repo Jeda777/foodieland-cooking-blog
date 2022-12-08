@@ -29,6 +29,7 @@ import share from './share.svg'
 import done from './done.svg'
 import chef from './Chef.png'
 import arrowDown from './arrowDown.svg'
+import instagram from './instagram.svg'
 
 const categories = [
   { name: 'breakfast', img: breakfast },
@@ -71,4 +72,5 @@ export {
   done,
   chef,
   arrowDown,
+  instagram,
 }
