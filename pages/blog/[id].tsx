@@ -45,7 +45,7 @@ const id: React.FC<Props> = ({ recipesData, post, user }) => {
         <div id={style.details}>
           <div id={style['details-post']}>
             {post.expand.parts.map((i, index) => (
-              <div className={style['post-section']}>
+              <div key={index} className={style['post-section']}>
                 {i.map((i2, index2) =>
                   index2 === 0 ? (
                     <h2 className={style['post-section-heading']} key={index2}>
