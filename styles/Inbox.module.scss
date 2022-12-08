@@ -10,7 +10,8 @@
       @apply w-64 rounded-2xl p-5 text-sm font-medium leading-[1.21em] tracking-[-0.02em] sm:p-1;
     }
     button {
-      @apply rounded-2xl bg-black py-[21px] px-[46px] text-sm font-semibold leading-[1.21em] tracking-[-0.02em] text-white;
+      @apply rounded-2xl bg-black py-[21px] px-[46px] text-sm font-semibold leading-[1.21em] tracking-[-0.02em] text-white
+      transition-all duration-300 hover:opacity-50;
     }
   }
   img {

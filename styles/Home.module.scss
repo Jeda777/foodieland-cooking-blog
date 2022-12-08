@@ -54,7 +54,7 @@
         }
         div {
           a {
-            @apply mb-2 cursor-pointer font-bold leading-[1.187em] tracking-[-0.02em] transition-all duration-300 hover:opacity-70
+            @apply mb-2 cursor-pointer font-bold leading-[1.187em] tracking-[-0.02em] transition-all duration-300 hover:opacity-50
             lg:text-[1.11vw] lg:leading-[1.187em];
           }
           p {
@@ -109,7 +109,7 @@
   .recipes-container {
     @apply grid grid-cols-1 items-center gap-4 lg:grid-cols-3 lg:gap-8 xl:gap-10;
     .ad {
-      @apply order-6 w-full max-w-[400px];
+      @apply order-6 w-full max-w-[400px] cursor-pointer;
     }
   }
 }
