@@ -22,9 +22,9 @@ const PostCard: React.FC<Props> = ({ post, user }) => {
           <div className={style['author-info']}>
             <div>
               <Image src={user.images.main} width='1' height='1' alt={post.name} />
-              <a>
+              <p>
                 {user.name} {user.surname}
-              </a>
+              </p>
             </div>
             <p>{moment(post.date).format('D MMMM YYYY')}</p>
           </div>
