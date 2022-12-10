@@ -10,12 +10,24 @@
     @apply text-left;
     h3 {
       @apply mb-2 text-lg font-semibold leading-[1.21em] tracking-[-0.02em] lg:text-2xl lg:leading-[1.21em];
+      span {
+        @apply transition-all duration-300;
+        background-image: linear-gradient(black, black);
+        background-size: 0 2px;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+      }
     }
     p {
       @apply py-2 text-xs leading-[1.625em] tracking-[-0.02em] opacity-60 lg:text-base lg:leading-[1.625em];
     }
     img {
       @apply w-full;
+    }
+    &:hover {
+      span {
+        background-size: 100% 2px;
+      }
     }
   }
   &.active {
@@ -24,6 +36,11 @@
     }
     button {
       @apply line-through opacity-60;
+      &:hover {
+        span {
+          background-size: 0 2px;
+        }
+      }
     }
   }
 }

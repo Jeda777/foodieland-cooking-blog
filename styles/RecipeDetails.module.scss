@@ -17,10 +17,11 @@
           }
           div {
             @apply flex flex-col justify-between;
-            p:nth-child(1) {
-              @apply mb-1 text-sm font-bold leading-[1.19em] tracking-[-0.02em] lg:text-base lg:leading-[1.19em];
+            a {
+              @apply mb-1 cursor-pointer text-sm font-bold leading-[1.19em] tracking-[-0.02em] transition-all duration-300
+              hover:opacity-50 lg:text-base lg:leading-[1.19em];
             }
-            p:nth-child(2) {
+            p {
               @apply text-xs font-normal leading-[1.21em] tracking-[-0.02em] opacity-60 lg:text-sm lg:leading-[1.21em];
             }
           }
@@ -50,7 +51,8 @@
       div {
         @apply flex flex-col gap-4;
         button {
-          @apply flex h-14 w-14 items-center justify-center rounded-full bg-brightBlue lg:h-20 lg:w-20;
+          @apply flex h-14 w-14 items-center justify-center rounded-full bg-brightBlue transition-all duration-300 hover:opacity-50 lg:h-20
+          lg:w-20;
         }
         p {
           @apply text-xs font-normal uppercase tracking-widest;

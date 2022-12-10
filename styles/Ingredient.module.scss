@@ -7,7 +7,7 @@
     }
   }
   button {
-    @apply leading-[1.22em] tracking-[-0.02em] lg:text-lg lg:leading-[1.22em];
+    @apply leading-[1.22em] tracking-[-0.02em] transition-all duration-300 hover:opacity-70 lg:text-lg lg:leading-[1.22em];
   }
   &.active {
     div {

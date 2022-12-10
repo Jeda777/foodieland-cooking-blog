@@ -33,7 +33,7 @@ const id: React.FC<Props> = ({ recipe, user, recipesData }) => {
               <div className={style['user-info']}>
                 <Image alt='user photo' width='1' height='1' src={user.images.main} />
                 <div>
-                  <p>John Smith</p>
+                  <a>John Smith</a>
                   <p>{moment(recipe.expand.date).format('D MMMM YYYY')}</p>
                 </div>
               </div>

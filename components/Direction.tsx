@@ -17,7 +17,7 @@ const Direction: React.FC<Props> = ({ direction, number }) => {
       </div>
       <button onClick={() => setActive((prev) => !prev)}>
         <h3>
-          {number + 1}. {direction[0]}
+          {number + 1}. <span>{direction[0]}</span>
         </h3>
         {direction.map((i, index) =>
           index === 0 ? null : i.startsWith('data:image/png;base64') ? (
