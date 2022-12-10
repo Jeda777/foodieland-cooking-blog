@@ -6,11 +6,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const client = await clientPromise
   const { id } = req.query
   if (typeof id === 'string' && ObjectId.isValid(id)) {
-    const data = await client
-      .db('Data')
-      .collection('blogPosts')
-      .find({ authorID: new ObjectId(id) })
-      .toArray()
+    const data = await client.db('Data').collection('blogPosts').find({ authorID: id }).toArray()
     if (data == null) {
       res.status(404).json('Not Found')
     } else {
