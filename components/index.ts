@@ -7,6 +7,7 @@ import Ingredient from './Ingredient'
 import InstagramIcon from './InstagramIcon'
 import Layout from './Layout'
 import Navbar from './Navbar'
+import OtherRecipeAside from './OtherRecipeAside'
 import Pagination from './Pagination'
 import PostCard from './PostCard'
 import RecipeCard from './RecipeCard'
@@ -23,6 +24,7 @@ export {
   InstagramIcon,
   Layout,
   Navbar,
+  OtherRecipeAside,
   Pagination,
   PostCard,
   RecipeCard,

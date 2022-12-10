@@ -1,9 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inbox, SmallRecipeCard, PostCard } from '../../components/index'
+import { Inbox, OtherRecipeAside, PostCard } from '../../components/index'
 import style from '../../styles/Blog.module.scss'
 import { BlogPost, User, Recipe } from '../../mongodb'
-import { ads } from '../../assets/index'
 import clientPromise from '../../database/mongodb'
 
 type Props = {
@@ -33,11 +31,7 @@ const index: React.FC<Props> = ({ recipesData, users, posts }) => {
               return <PostCard key={i._id} user={user} post={i} />
             })}
           </div>
-          <aside>
-            <h2>Other Recipe</h2>
-            {recipesData.map((i, index) => (index < 3 ? <SmallRecipeCard key={index} recipe={i} /> : null))}
-            <Image className={style.ad} src={ads} alt='ad' />
-          </aside>
+          <OtherRecipeAside recipesData={recipesData} />
         </div>
       </section>
 

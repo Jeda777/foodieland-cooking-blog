@@ -2,10 +2,10 @@ import { ObjectId } from 'mongodb'
 import { GetServerSideProps } from 'next'
 import { Recipe, User } from '../../mongodb'
 import clientPromise from '../../database/mongodb'
-import { Inbox, YouMayLikeTheseRecipesToo, Ingredient, Direction, SmallRecipeCard } from '../../components/index'
+import { Inbox, YouMayLikeTheseRecipesToo, Ingredient, Direction, OtherRecipeAside } from '../../components/index'
 import style from '../../styles/RecipeDetails.module.scss'
 import Image from 'next/image'
-import { timer, forkKnife, printer, share, ads } from '../../assets/index'
+import { timer, forkKnife, printer, share } from '../../assets/index'
 import moment from 'moment'
 import Head from 'next/head'
 
@@ -120,11 +120,7 @@ const id: React.FC<Props> = ({ recipe, user, recipesData }) => {
               ))}
             </ul>
           </div>
-          <aside>
-            <h2>Other Recipe</h2>
-            {recipesData.map((i, index) => (index < 3 ? <SmallRecipeCard key={index} recipe={i} /> : null))}
-            <Image className={style.ad} src={ads} alt='ad' />
-          </aside>
+          <OtherRecipeAside recipesData={recipesData} />
         </div>
       </section>
       <Inbox />
