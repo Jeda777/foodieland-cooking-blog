@@ -24,8 +24,8 @@
         img {
           @apply h-10 w-10 rounded-full;
         }
-        p {
-          @apply text-base font-bold leading-[1.1875em] opacity-100;
+        a {
+          @apply cursor-pointer font-bold leading-[1.1875em] transition-all duration-300 hover:opacity-50;
         }
       }
       p {
