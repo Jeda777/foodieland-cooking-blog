@@ -1,9 +1,17 @@
 .heart {
   @apply absolute top-9 right-9 flex h-12 w-12 items-center justify-center rounded-full bg-white;
   svg {
-    @apply mt-3;
+    @apply mt-3 h-12 w-12;
+    path {
+      @apply origin-[50%_30%] transition-all duration-300;
+    }
   }
   &[data-type='2'] {
     @apply top-5 right-5;
+  }
+  &:hover {
+    path {
+      @apply scale-[140%];
+    }
   }
 }
