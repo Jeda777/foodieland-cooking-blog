@@ -13,8 +13,9 @@
         img {
           @apply h-12 w-12 rounded-full;
         }
-        p {
-          @apply text-sm font-bold leading-[1.19em] tracking-[-0.02em] lg:text-base lg:leading-[1.19em];
+        a {
+          @apply cursor-pointer text-sm font-bold leading-[1.19em] tracking-[-0.02em] transition-all duration-300 hover:opacity-50
+          lg:text-base lg:leading-[1.19em];
         }
       }
       .date {
