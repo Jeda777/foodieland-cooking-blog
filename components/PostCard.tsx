@@ -14,7 +14,9 @@ const PostCard: React.FC<Props> = ({ post, user }) => {
     <article className={style.post}>
       <Image src={post.images.main} width='1' height='1' alt={post.name} />
       <Link href={`/blog/${post._id}`} className={style['post-info']}>
-        <h3>{post.name}</h3>
+        <h3>
+          <span>{post.name}</span>
+        </h3>
         <p className={style.description}>{post.description}</p>
         {user !== undefined ? (
           <div className={style['author-info']}>

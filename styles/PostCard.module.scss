@@ -6,7 +6,13 @@
   .post-info {
     @apply flex flex-col justify-between gap-2 md:gap-4 md:py-3;
     h3 {
-      @apply text-lg font-semibold leading-[1.21em] tracking-[-0.04em] lg:text-2xl lg:leading-[1.21em];
+      span {
+        @apply text-lg font-semibold leading-[1.21em] tracking-[-0.04em] transition-all duration-300 lg:text-2xl lg:leading-[1.21em];
+        background-image: linear-gradient(black, black);
+        background-size: 0 2px;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+      }
     }
     .description {
       @apply text-sm leading-[1.75em] opacity-60 lg:text-base lg:leading-[1.75em];
@@ -24,6 +30,11 @@
       }
       p {
         @apply text-sm font-medium leading-[1.21em] tracking-[-0.02em] opacity-60;
+      }
+    }
+    &:hover {
+      span {
+        background-size: 100% 2px;
       }
     }
   }

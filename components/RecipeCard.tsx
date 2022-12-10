@@ -21,7 +21,9 @@ const RecipeCard: React.FC<Props> = ({ type, data, index }) => {
         <Heart type={type} liked={liked} setLiked={setLiked} />
       </div>
       <Link href={`/recipes/${data._id}`} className={style['text-container']}>
-        <h6>{data.name}</h6>
+        <h6>
+          <span>{data.name}</span>
+        </h6>
         <div>
           <div>
             <Image src={timer} alt='timer' />
